@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragment.SettingActivity">
+
+    <View
+        android:id="@+id/bg_top_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_header" />
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:tint="@color/back_button" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/ivBack"
+            android:text="Setting"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTop"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/baseline_radio_button_unchecked_24"
+            android:gravity="center"
+            android:maxLength="2"
+            android:text="KK"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="Profile" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swtNotification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="Notification" />
+
+        <TextView
+            android:id="@+id/tvAboutUS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="About Us" />
+
+        <TextView
+            android:id="@+id/tvPrivacyPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="Privacy Policy" />
+
+        <TextView
+            android:id="@+id/tvTermsCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="Terms Conditions" />
+
+        <TextView
+            android:id="@+id/tvDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="Delete Account" />
+
+    </LinearLayout>
+
+</RelativeLayout>

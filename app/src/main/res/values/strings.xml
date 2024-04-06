@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">UOS</string>
+    <string name="app_id">ca-app-pub-1271993399541436~8617040744</string>
+    <string name="app_id_test">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_id">ca-app-pub-1271993399541436/6405084021</string>
+    <string name="banner_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="open_ad">ca-app-pub-3940256099942544/9257395921</string>
+    <string name="interstitial_ad">ca-app-pub-3940256099942544/1033173712</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="g_one">Blood Test</string>
+    <string name="g_one_description">You Got Your Blood checkup free of cost.</string>
+
+    <string name="g_two">Blood Donation</string>
+    <string name="g_two_description">Your Blood will save someone\'s Life</string>
+    <string name="g_three">Thanks</string>
+    <string name="g_three_description">Thanks for save life through your blood.</string>
+    <string name="forgot_your_password_no_worry_click_here">Forgot Your Password No Worry? <b>Click Here</b></string>
+    <string name="not_have_an_account_signup_here">Not Have an Account ? <b>SignUp Here</b></string>
+    <string name="already_have_an_account_click_here">Already Have an account? <b>Click Here</b></string>
+
+</resources>
