@@ -61,6 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rlTop"
+        android:layout_marginHorizontal="15dp"
         android:orientation="vertical">
 
         <TextView
@@ -80,202 +81,210 @@
 
 
         <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/btnUpdate"
+            android:id="@+id/sv"
+            android:layout_marginTop="15dp"
+            android:layout_above="@+id/llbtm"
             android:layout_below="@+id/tvName"
-            android:layout_marginBottom="5dp">
-
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                 android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Name"/>
+
+                <EditText
+                    android:id="@+id/edt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Name"
-                    app:endIconMode="clear_text">
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Name"
+                    android:padding="10dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_name"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Email"/>
 
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
+                    android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Email"
-                    app:endIconMode="clear_text">
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Email"
+                    android:padding="10dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_email"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clickable="false"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:hint=""
-                        android:inputType="textEmailAddress" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Mobile"/>
 
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
+                    android:id="@+id/edt_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Mobile"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_mobile"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:focusableInTouchMode="false"
-                        android:clickable="false"
-                        android:focusable="false"
-                        android:hint=""
-                        android:inputType="numberSigned" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Email"
+                    android:padding="10dp" />
 
 
-                <com.google.android.material.textfield.TextInputLayout
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Blood Group"/>
+
+                <EditText
+                    android:id="@+id/edt_bloodGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Blood Group"
-                    app:endIconMode="clear_text">
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Choose Blood Group"
+                    android:padding="10dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_bloodGroup"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:hint="State"
-                        app:endIconMode="clear_text">
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="State"/>
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <EditText
                             android:id="@+id/edt_state"
-                            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint=""
-                            android:inputType="text" />
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="Enter Your State"
+                            android:padding="10dp" />
 
-                    </com.google.android.material.textfield.TextInputLayout>
 
+                    </LinearLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
-                        android:hint="City"
-                        app:endIconMode="clear_text">
+                        android:layout_marginStart="10dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="10dp"
+                            android:text="City"/>
+
+                        <EditText
                             android:id="@+id/edt_city"
-                            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint=""
-                            android:inputType="text" />
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="Enter Your City"
+                            android:padding="10dp" />
 
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
 
 
-                <com.google.android.material.textfield.TextInputLayout
+
+                <TextView
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Area"/>
+
+                <EditText
+                    android:id="@+id/edt_area"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Area"
-                    app:endIconMode="clear_text">
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Area"
+                    android:padding="10dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_area"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"/>
 
-                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
+                    android:id="@+id/edt_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Address"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_address"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:gravity="start"
-                        android:inputType="textMultiLine"
-                        android:maxLength="130"
-                        android:maxLines="3"
-                        android:singleLine="false" />
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Area"
+                    android:gravity="start"
+                    android:maxLines="3"
+                    android:maxLength="130"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
 
 
-                </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Date of Birth"/>
 
-                <com.google.android.material.textfield.TextInputLayout
+
+                <EditText
+                    android:id="@+id/edt_dob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Date of Birthdate"
-                    app:endIconMode="clear_text">
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Birthdate"
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_dob"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text|date" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:padding="10dp" />
 
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text_bg"
                     android:orientation="horizontal">
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -295,55 +304,74 @@
                 </RadioGroup>
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/TL_lastdonate"
+                <TextView
+                    android:id="@+id/tvLastDonate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Last Donate"/>
+
+
+                <EditText
+                    android:id="@+id/edt_lastDonate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Last Donate"
-                    android:visibility="gone">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_lastDonate"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text|date" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Last Donate"
+                    android:padding="10dp" />
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
+                    android:id="@+id/tvPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Password"/>
+
+
+                <EditText
+                    android:id="@+id/edt_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="password"
-                    app:passwordToggleEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_password"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="textPassword" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Password"
+                    android:inputType="textPassword"
+                    android:padding="10dp" />
 
 
             </LinearLayout>
 
-
         </ScrollView>
 
 
-        <Button
-            android:id="@+id/btnUpdate"
+        <LinearLayout
+            android:id="@+id/llbtm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="Update" />
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Update"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/button_color"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
 
 
     </RelativeLayout>

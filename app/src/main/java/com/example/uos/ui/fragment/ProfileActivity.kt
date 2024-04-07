@@ -76,6 +76,8 @@ class ProfileActivity : BaseActivity() {
             binding.edtLastDonate.setText("" + lastDonate)
             binding.edtPassword.setText("")
 
+            Log.e("TAG123456789", "onCreate: "+user?.user_donor.toString())
+
             if (user?.user_donor.equals("user"))
             {
                 binding.rbUser.isChecked =false
@@ -236,7 +238,7 @@ class ProfileActivity : BaseActivity() {
         month = gc1.get(Calendar.MONTH)
         day = gc1.get(Calendar.DAY_OF_MONTH)
         val dp = DatePickerDialog(
-            applicationContext, R.style.TransparentDialog,
+            this, R.style.TransparentDialog,
             { datePicker, Year, Month, Day -> binding.edtDob.setText(Day.toString() + "/" + (Month + 1) + "/" + Year) },
             year,
             month,
@@ -247,7 +249,7 @@ class ProfileActivity : BaseActivity() {
 
     private fun showBloodDialogue() {
         val bindingBlood = DialogueBloodGroupBinding.inflate(layoutInflater)
-        b1 = AlertDialog.Builder(this@ProfileActivity.applicationContext, R.style.TransparentDialog)
+        b1 = AlertDialog.Builder(this@ProfileActivity, R.style.TransparentDialog)
         b1!!.setView(bindingBlood.root)
 
         bindingBlood.tvAPositive.setOnClickListener {

@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import com.bumptech.glide.Glide
 import com.example.uos.R
 import com.example.uos.databinding.ActivityMainBinding
 import com.example.uos.databinding.ExitDialogueBinding
@@ -33,13 +34,13 @@ class MainActivity : BaseActivity() {
 
         val currentTime = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
         val greetingMessage = getGreetingMessage(currentTime)
-        binding.tvWelcomr.text = ""+greetingMessage+" "+user?.name
+        binding.tvWelcome.text = ""+greetingMessage+" "+user?.name
 
         binding.tvEmail.text = ""+user?.email
 
 
         // Animating tvWelcome
-        binding.tvWelcomr.apply {
+        binding.tvWelcome.apply {
             alpha = 0f // Initially make it transparent
             scaleX = 0f // Initially scale it down horizontally
             scaleY = 0f // Initially scale it down vertically
@@ -50,6 +51,7 @@ class MainActivity : BaseActivity() {
                 .setDuration(1000) // Set animation duration in milliseconds
                 .start() // Start the animation
         }
+        binding.tvWelcome.isSelected = true
 
 // Animating tvEmail
         binding.tvEmail.apply {
@@ -64,6 +66,7 @@ class MainActivity : BaseActivity() {
         }
 
 
+        Glide.with(applicationContext).load(R.drawable.ic_setting_).into(binding.ivSetting)
         binding.cvBloodRequest.setOnClickListener {
             val intent = Intent(applicationContext, RequestActivity::class.java)
             startActivity(intent)

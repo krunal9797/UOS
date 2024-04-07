@@ -1,5 +1,6 @@
 package com.example.uos.ui.activity
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +20,7 @@ import com.example.uos.utils.SharedPreference
 class RequestActivity : BaseActivity() {
     private lateinit var binding:ActivityRequestBinding
     lateinit var vm: ViewModel
+    private lateinit var progressDialog: ProgressDialog
     companion object{
         private var arrRequestUser: ArrayList<Request> = ArrayList()
     }
@@ -32,12 +34,15 @@ class RequestActivity : BaseActivity() {
         vm = ViewModelProvider(this)[ViewModel::class.java]
 
         user = SharedPreference.getUser(applicationContext)
-
+        progressDialog = ProgressDialog(this)
+        progressDialog.setMessage("Loading...")
+        progressDialog.show()
         requestAdapter = RequestAdapter(arrRequestUser,applicationContext,1)
         binding.rvRequest.adapter = requestAdapter
 
         if (arrRequestUser.isNotEmpty())
         {
+            progressDialog.dismiss()
             requestAdapter.notifyDataSetChanged()
         }
         else
@@ -50,9 +55,10 @@ class RequestActivity : BaseActivity() {
                         arrRequestUser.clear()
                         arrRequestUser.addAll(result.requests)
                         requestAdapter.notifyDataSetChanged()
+                        progressDialog.dismiss()
                     }
                     else{
-
+                        progressDialog.dismiss()
                     }
                 }
             }

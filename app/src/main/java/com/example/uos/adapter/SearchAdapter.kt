@@ -66,7 +66,9 @@ class SearchAdapter(private var arrUser: ArrayList<User>, var context: Context,v
         holder.binding.tvCity.text = ""+user.city
         holder.binding.tvArea.text = ""+user.area
 
-        if (user.last_donate == "0" && user.last_donate.isNullOrEmpty())
+        Log.e("TAG123456789", "onBindViewHolder: last donate "+user.last_donate )
+
+        if (user.last_donate == "0" && user.last_donate.equals(0))
         {
             holder.binding.tvLastDonate.visibility = View.INVISIBLE
         }
@@ -74,6 +76,15 @@ class SearchAdapter(private var arrUser: ArrayList<User>, var context: Context,v
         {
             holder.binding.tvLastDonate.visibility = View.VISIBLE
             holder.binding.tvLastDonate.text = user.last_donate
+        }
+        Log.e("TAG123456789", "onBindViewHolder: last donate " + user.last_donate);
+
+// Check if user.last_donate is equal to "0" or 0
+        if ("0".equals(user.last_donate) || Integer.parseInt(user.last_donate) == 0) {
+            holder.binding.tvLastDonate.setVisibility(View.INVISIBLE);
+        } else {
+            holder.binding.tvLastDonate.setVisibility(View.VISIBLE);
+            holder.binding.tvLastDonate.setText(user.last_donate);
         }
 
 

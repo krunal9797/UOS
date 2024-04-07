@@ -20,6 +20,7 @@ class DonationActivity : BaseActivity() {
         binding.ivBack.setOnClickListener {
             backEvent()
         }
+
     }
 
     private fun backEvent() {

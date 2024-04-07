@@ -39,28 +39,35 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvWelcomr"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvWelcome"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:gravity="center"
+                android:gravity="start|center"
                 android:text="Good Morning Krunal"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scrollHorizontally="true"
+                android:layout_margin="5dp"/>
 
             <TextView
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
                 android:gravity="center"
                 android:text="gamitkrunal007@gamil.com"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -128,7 +135,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/baseline_home_24"
+                            android:src="@drawable/ic_request"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -170,7 +177,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_search"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -219,7 +226,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_event"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -261,7 +268,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_gallery"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -311,7 +318,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_donation"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -352,7 +359,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_hospital"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -401,7 +408,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_about"
                             android:tint="@color/image_button" />
 
                         <TextView
@@ -443,7 +450,7 @@
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="center"
-                            android:src="@mipmap/ic_launcher"
+                            android:src="@drawable/ic_setting_"
                             android:tint="@color/image_button" />
 
                         <TextView

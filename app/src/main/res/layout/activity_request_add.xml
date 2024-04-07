@@ -46,7 +46,8 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rlTop"
@@ -54,190 +55,218 @@
 
 
         <ScrollView
+            android:layout_above="@+id/ll"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
                 android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Name" />
+
+                <EditText
+                    android:id="@+id/edt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Name"
-                    app:endIconMode="clear_text">
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Name"
+                    android:padding="10dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_name"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text" />
+                <TextView
+                    android:id="@+id/tvMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Mobile" />
 
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
+                <EditText
+                    android:id="@+id/edt_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Mobile"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_mobile"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="numberSigned" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Mobie"
+                    android:padding="10dp" />
 
 
-                <com.google.android.material.textfield.TextInputLayout
+                <TextView
+                    android:id="@+id/tvBloodGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Mobile" />
+
+                <EditText
+                    android:id="@+id/edt_bloodGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Blood Group"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                        android:id="@+id/edt_bloodGroup"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Mobile"
+                    android:padding="10dp" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
                     android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:hint="State"
-                        app:endIconMode="clear_text">
+                        android:orientation="vertical">
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="State" />
+
+                        <EditText
                             android:id="@+id/edt_state"
-                            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint=""
-                            android:inputType="text" />
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="Enter Your State"
+                            android:padding="10dp" />
 
-                    </com.google.android.material.textfield.TextInputLayout>
 
+                    </LinearLayout>
 
-                    <com.google.android.material.textfield.TextInputLayout
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:hint="City"
-                        app:endIconMode="clear_text">
+                        android:orientation="vertical">
 
-                        <com.google.android.material.textfield.TextInputEditText
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="City" />
+
+                        <EditText
                             android:id="@+id/edt_city"
-                            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint=""
-                            android:inputType="text" />
+                            android:background="@drawable/edit_text_bg"
+                            android:hint="Enter Your City"
+                            android:padding="10dp" />
 
 
-                    </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
 
 
                 </LinearLayout>
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Area"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_area"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Address"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_address"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:gravity="start"
-                        android:inputType="textMultiLine"
-                        android:maxLength="130"
-                        android:maxLines="3"
-                        android:singleLine="false" />
-
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:hint="Hospital"
-                    app:endIconMode="clear_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_hospitalName"
-                        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint=""
-                        android:inputType="text|date" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <Button
-                    android:id="@+id/btnSend"
+                <TextView
+                    android:id="@+id/tvArea"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginVertical="10dp"
-                    android:text="Request" />
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Area" />
 
-
-                <View
+                <EditText
+                    android:id="@+id/edt_area"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:background="@android:color/transparent" />
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="Enter Your Area"
+                    android:padding="10dp" />
+
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Address" />
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="start"
+                    android:hint="Enter Your Area"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/tvHospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Mobile" />
+
+                <EditText
+                    android:id="@+id/edt_hospitalName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:gravity="start"
+                    android:hint="Enter Your Mobile"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:padding="10dp" />
+
 
             </LinearLayout>
 
 
         </ScrollView>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Submit"
+                android:textColor="@color/button_color"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

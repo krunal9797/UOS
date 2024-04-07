@@ -40,18 +40,18 @@
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
             android:text="About Us"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
 
     <WebView
-        android:layout_below="@+id/rlTop"
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlTop" />
 
 
 </RelativeLayout>

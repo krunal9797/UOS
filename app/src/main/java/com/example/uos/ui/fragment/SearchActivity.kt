@@ -29,7 +29,7 @@ class SearchActivity : BaseActivity(), ClickToCall {
     private var registerMap: HashMap<String, String> = HashMap()
     private var callMap: HashMap<String, String> = HashMap()
     private lateinit var progressDialog: ProgressDialog
-    lateinit var searchAdapter: SearchAdapter
+    private lateinit var searchAdapter: SearchAdapter
     private var arrUser: ArrayList<User> = ArrayList()
     private var user: User? = null
     var a1: AlertDialog? = null
@@ -73,12 +73,10 @@ class SearchActivity : BaseActivity(), ClickToCall {
                     binding.edtBloodGroup.requestFocusFromTouch()
                     showBloodDialogue()
                     Utils.showToast(this, "Select Blood Group")
+                } else {
+                    val searchText = binding.edtSearch.text.toString().trim()
+                    callSearchApiBloodGroup(searchText)
                 }
-                /*                else
-                                {
-                                    val searchText = binding.edtSearch.text.toString().trim()
-                                    callSearchApiBloodGroup(searchText)
-                                }*/
 
                 return@setOnEditorActionListener true
             }
