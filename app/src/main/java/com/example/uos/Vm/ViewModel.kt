@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import com.example.uos.Repo.VMRepo
 import com.example.uos.model.GalleryResponse
 import com.example.uos.model.BloodResponse
+import com.example.uos.model.EventModelResponse
 import com.example.uos.model.SearchUserModel
 import com.example.uos.model.UosDataModel
 import com.example.uos.model.UserResponse
@@ -53,6 +54,9 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         return vmRepo.getGallery();
     }
 
+    fun getEvent():LiveData<EventModelResponse>{
+        return vmRepo.getEvent()
+    }
 
     fun deleteUser(@FieldMap deleteMap:Map<String,String>) : LiveData<BloodResponse>{
         return vmRepo.deleteUser(deleteMap)

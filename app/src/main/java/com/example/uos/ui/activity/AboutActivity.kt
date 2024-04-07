@@ -1,17 +1,14 @@
 package com.example.uos.ui.activity
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
-import android.view.View
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.example.uos.R
 import com.example.uos.databinding.ActivityAboutBinding
-import com.example.uos.ui.fragment.SettingActivity
 import com.example.uos.utils.Config
+import com.example.uos.utils.CustomProgressDialog
 import com.uos.bloodbank.utils.Constant
 
 
@@ -19,7 +16,8 @@ class AboutActivity : BaseActivity() {
 
     lateinit var binding:ActivityAboutBinding
     private var activity:String? = null
-    private lateinit var progressDialog: ProgressDialog
+
+    private lateinit var customProgressDialog: CustomProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +30,9 @@ class AboutActivity : BaseActivity() {
             backEvent()
         }
 
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
-        progressDialog.setCancelable(false)
+        customProgressDialog = CustomProgressDialog(this)
+
+        // Show the custom progress dialog
 
         binding.webView.webViewClient = MyWebViewClient()
         binding.webView.webChromeClient = MyWebChromeClient()
@@ -44,12 +42,12 @@ class AboutActivity : BaseActivity() {
     private inner class MyWebViewClient : WebViewClient() {
         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
             super.onPageStarted(view, url, favicon)
-            progressDialog.show()
+            customProgressDialog.show()
         }
 
         override fun onPageFinished(view: WebView?, url: String?) {
             super.onPageFinished(view, url)
-            progressDialog.dismiss()
+            customProgressDialog.dismiss()
         }
     }
 
@@ -61,7 +59,7 @@ class AboutActivity : BaseActivity() {
     private fun backEvent() {
         if (activity!= null && activity.equals("setting"))
         {
-            startActivity(Intent(applicationContext,SettingActivity::class.java))
+            startActivity(Intent(applicationContext, SettingActivity::class.java))
         }
         else
         {

@@ -1,25 +1,19 @@
 package com.example.uos.ui.activity
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.uos.R
 import com.example.uos.databinding.ActivityPrivacyPolicyBinding
-import com.example.uos.ui.fragment.SettingActivity
 import com.example.uos.utils.Config
+import com.example.uos.utils.CustomProgressDialog
 import com.uos.bloodbank.utils.Constant
 
 class PrivacyPolicyActivity : BaseActivity() {
     lateinit var binding:ActivityPrivacyPolicyBinding
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPrivacyPolicyBinding.inflate(layoutInflater)
@@ -29,10 +23,7 @@ class PrivacyPolicyActivity : BaseActivity() {
             backEvent()
         }
 
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
-        progressDialog.setCancelable(false)
-
+        customProgressDialog = CustomProgressDialog(this)
         binding.webView.webViewClient = MyWebViewClient()
         binding.webView.webChromeClient = MyWebChromeClient()
         binding.webView.loadUrl(Config.BASE_URL+ Constant.WEB_SERVICES.WS_PRIVACY_POLICY)
@@ -42,12 +33,12 @@ class PrivacyPolicyActivity : BaseActivity() {
     private inner class MyWebViewClient : WebViewClient() {
         override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
             super.onPageStarted(view, url, favicon)
-            progressDialog.show()
+            customProgressDialog.show()
         }
 
         override fun onPageFinished(view: WebView?, url: String?) {
             super.onPageFinished(view, url)
-            progressDialog.dismiss()
+            customProgressDialog.dismiss()
         }
     }
 
@@ -57,7 +48,7 @@ class PrivacyPolicyActivity : BaseActivity() {
 
 
     private fun backEvent() {
-        val intent = Intent(applicationContext,SettingActivity::class.java)
+        val intent = Intent(applicationContext, SettingActivity::class.java)
         startActivity(intent)
         finish()
     }

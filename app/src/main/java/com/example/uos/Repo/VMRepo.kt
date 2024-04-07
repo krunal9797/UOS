@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.uos.model.GalleryResponse
 import com.example.uos.model.BloodResponse
+import com.example.uos.model.EventModelResponse
 import com.example.uos.model.SearchUserModel
 import com.example.uos.model.UosDataModel
 import com.example.uos.model.UserResponse
@@ -215,6 +216,29 @@ class VMRepo private constructor() {
             }
 
             override fun onFailure(call: Call<GalleryResponse>, t: Throwable) {
+                call.cancel()
+            }
+
+        })
+        return responseModelMutableLiveData
+    }
+
+    fun getEvent():LiveData<EventModelResponse>{
+        val responseModelMutableLiveData = MutableLiveData<EventModelResponse>()
+        ApiClient.getAPIService().getEvent().enqueue(object : Callback<EventModelResponse> {
+            override fun onResponse(
+                call: Call<EventModelResponse>,
+                response: Response<EventModelResponse>
+            ) {
+                if (response.isSuccessful) {
+                    Log.e("TAG123456789", "onResponse: " + response.message())
+                    responseModelMutableLiveData.postValue(response.body())
+                } else {
+                    responseModelMutableLiveData.postValue(response.body())
+                }
+            }
+
+            override fun onFailure(call: Call<EventModelResponse>, t: Throwable) {
                 call.cancel()
             }
 

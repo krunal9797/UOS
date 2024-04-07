@@ -2,6 +2,7 @@ package com.example.uos.network
 
 import com.example.uos.model.GalleryResponse
 import com.example.uos.model.BloodResponse
+import com.example.uos.model.EventModelResponse
 import com.example.uos.model.SearchUserModel
 import com.example.uos.model.UosDataModel
 import com.example.uos.model.UserResponse
@@ -45,9 +46,12 @@ interface APIInterface {
     @POST(Constant.WEB_SERVICES.WS_CALL_DATA)
     fun callInsert(@FieldMap callMap:Map<String,String>) : Call<BloodResponse>
 
-
     @POST(Constant.WEB_SERVICES.WS_GALLERY)
     fun getGallery():Call<GalleryResponse>
+
+    @POST(Constant.WEB_SERVICES.WS_EVENT)
+    fun getEvent():Call<EventModelResponse>
+
 
     @FormUrlEncoded
     @POST(Constant.WEB_SERVICES.WS_DELETE)

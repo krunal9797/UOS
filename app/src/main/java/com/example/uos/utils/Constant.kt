@@ -33,6 +33,7 @@ object Constant {
         const val WS_DELETE = "api/delete_user.php"
         const val WS_FORGET_PASS = "api/forgetpassword.php"
         const val WS_DATA_CHANGE = "api/get_uos_data.php"
+        const val WS_EVENT = "api/event.php"
         const val WS_ABOUT = "api/about.html"
         const val WS_PRIVACY_POLICY = "api/privacy_policy.html"
         const val WS_TERMS_CONDITIONS = "api/terms_condition.html"

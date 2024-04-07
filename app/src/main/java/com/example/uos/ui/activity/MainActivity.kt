@@ -1,6 +1,5 @@
 package com.example.uos.ui.activity
 
-import android.animation.ValueAnimator
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -11,10 +10,6 @@ import com.example.uos.R
 import com.example.uos.databinding.ActivityMainBinding
 import com.example.uos.databinding.ExitDialogueBinding
 import com.example.uos.model.User
-import com.example.uos.ui.fragment.NotificationActivity
-import com.example.uos.ui.fragment.ProfileActivity
-import com.example.uos.ui.fragment.SearchActivity
-import com.example.uos.ui.fragment.SettingActivity
 import com.example.uos.utils.SharedPreference
 import java.util.Calendar
 
@@ -131,9 +126,9 @@ class MainActivity : BaseActivity() {
             if (SharedPreference.isCheckNotification(applicationContext)) View.VISIBLE else View.GONE
 
         binding.ivNotification.setOnClickListener {
-            val intent = Intent(applicationContext, NotificationActivity::class.java)
+         /*   val intent = Intent(applicationContext, NotificationActivity::class.java)
             startActivity(intent)
-            finish()
+            finish()*/
         }
     }
 
@@ -143,6 +138,7 @@ class MainActivity : BaseActivity() {
             in 5..11 -> "Good Morning"
             in 12..16 -> "Good Afternoon"
             in 17..20 -> "Good Evening"
+            in 21..23 -> "Good Night"
             else -> "Welcome To UOS"
         }
     }

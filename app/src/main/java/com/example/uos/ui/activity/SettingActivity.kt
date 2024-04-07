@@ -1,6 +1,5 @@
-package com.example.uos.ui.fragment
+package com.example.uos.ui.activity
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
@@ -10,20 +9,15 @@ import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivitySettingBinding
 import com.example.uos.databinding.DeleteDialogueBinding
 import com.example.uos.model.User
-import com.example.uos.ui.activity.AboutActivity
-import com.example.uos.ui.activity.BaseActivity
-import com.example.uos.ui.activity.LoginActivity
-import com.example.uos.ui.activity.MainActivity
-import com.example.uos.ui.activity.PrivacyPolicyActivity
-import com.example.uos.ui.activity.TermsConditionActivity
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
-import com.google.android.material.button.MaterialButtonToggleGroup.OnButtonCheckedListener
+import com.example.uos.utils.Utils
 
 class SettingActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySettingBinding
 
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     private var a1: AlertDialog? = null
     private var b1: AlertDialog.Builder? = null
     private var user: User? = null
@@ -39,6 +33,8 @@ class SettingActivity : BaseActivity() {
         vm = ViewModelProvider(this)[ViewModel::class.java]
         user = SharedPreference.getUser(this@SettingActivity)
 
+        customProgressDialog = CustomProgressDialog(this)
+
         binding.tvAboutUS.setOnClickListener {
             startActivity(Intent(this, AboutActivity::class.java).putExtra("activity","setting"))
             finish()
@@ -51,7 +47,7 @@ class SettingActivity : BaseActivity() {
         }
 
         binding.tvProfile.setOnClickListener {
-            val intent = Intent(applicationContext,ProfileActivity::class.java)
+            val intent = Intent(applicationContext, ProfileActivity::class.java)
             intent.putExtra("activity","setting")
             startActivity(intent)
             finish()
@@ -96,19 +92,33 @@ class SettingActivity : BaseActivity() {
         bindingDelete.ivClose.setOnClickListener { a1?.dismiss() }
 
         bindingDelete.tvDelete.setOnClickListener {
-            vm.deleteUser(deleteMap).observe(this) { result ->
-                if (result != null) {
-                    if (result.error == "200") {
-                        a1?.dismiss()
-                        SharedPreference.clearUser(this)
-                        startActivity(Intent(this, LoginActivity::class.java))
+            if (bindingDelete.edtConfirm.text.equals("Confirm") && bindingDelete.edtConfirm.text.equals("confirm") && bindingDelete.edtConfirm.text.equals("CONFIRM"))
+            {
+                customProgressDialog.show()
+                vm.deleteUser(deleteMap).observe(this) { result ->
+                    if (result != null) {
+                        if (result.error == "200") {
+                            a1?.dismiss()
+                            customProgressDialog.dismiss()
+                            SharedPreference.clearUser(this)
+                            startActivity(Intent(this, LoginActivity::class.java))
+                            finish()
+                        } else {
+                            a1?.dismiss()
+                            customProgressDialog.dismiss()
+                        }
                     } else {
                         a1?.dismiss()
+                        customProgressDialog.dismiss()
                     }
-                } else {
-                    a1?.dismiss()
                 }
             }
+            else
+            {
+
+                Utils.showToast(this,"Type Confirm To Delete Account")
+            }
+
         }
         a1 = b1!!.create()
         a1!!.show()

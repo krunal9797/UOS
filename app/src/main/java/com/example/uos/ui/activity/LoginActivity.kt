@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.uos.R
 import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityLoginBinding
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -25,7 +26,7 @@ class LoginActivity : BaseActivity() {
     lateinit var vm: ViewModel
     lateinit var mAdView:AdView;
     private var registerMap: HashMap<String, String> = HashMap()
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,9 +34,7 @@ class LoginActivity : BaseActivity() {
         setContentView(binding.root)
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
-
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
+        customProgressDialog = CustomProgressDialog(this)
 
         binding.tvLoginWithEmail.setOnClickListener {
             if (!isEmailVisible) {
@@ -64,7 +63,7 @@ class LoginActivity : BaseActivity() {
 
 
         binding.btnLogin.setOnClickListener {
-            progressDialog.show()
+            customProgressDialog.show()
             val email = binding.edtEmail.text.toString()
             val mobile = binding.edtMobile.text.toString()
             val password = binding.edtPassword.text.toString()
@@ -105,7 +104,7 @@ class LoginActivity : BaseActivity() {
         vm.getLogin(registerMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
 
                     Toast.makeText(
                         applicationContext, "" + result.user.name, Toast.LENGTH_SHORT
@@ -116,14 +115,14 @@ class LoginActivity : BaseActivity() {
                     finish()
 
                 } else {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
 
                     Toast.makeText(
                         applicationContext, "" + result.message, Toast.LENGTH_SHORT
                     ).show()
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Toast.makeText(
                     applicationContext, "An error occurred", Toast.LENGTH_SHORT
                 ).show()

@@ -40,11 +40,23 @@
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
             android:text="Event"
+            android:singleLine="true"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="21sp" />
 
     </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/rlTop"
+        android:id="@+id/rvEvent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:itemCount="10"
+        tools:listitem="@layout/row_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>

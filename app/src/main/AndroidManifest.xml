@@ -80,11 +80,11 @@
             android:name=".ui.activity.LoginActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.fragment.RequestAddActivity" />
-        <activity android:name=".ui.fragment.SearchActivity" />
-        <activity android:name="com.example.uos.ui.fragment.NotificationActivity" />
-        <activity android:name="com.example.uos.ui.fragment.SettingActivity" />
-        <activity android:name="com.example.uos.ui.fragment.ProfileActivity" />
+        <activity android:name=".ui.activity.RequestAddActivity" />
+        <activity android:name=".ui.activity.SearchActivity" />
+        <activity android:name="com.example.uos.ui.activity.NotificationActivity" />
+        <activity android:name="com.example.uos.ui.activity.SettingActivity" />
+        <activity android:name="com.example.uos.ui.activity.ProfileActivity" />
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.fragment.SearchActivity">
+    tools:context=".ui.activity.SearchActivity">
 
     <View
         android:id="@+id/bg_top_header"
@@ -81,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Area,City,State "
+                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:padding="10dp" />
 
@@ -110,7 +111,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint=""
+                    android:text="O+"
+                    android:gravity="center"
+                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:padding="10dp" />
 

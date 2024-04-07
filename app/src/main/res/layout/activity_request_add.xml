@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".ui.fragment.RequestAddActivity">
+    tools:context=".ui.activity.RequestAddActivity">
 
     <View
         android:id="@+id/bg_top_header"
@@ -81,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Name"
+                    android:singleLine="true"
                     android:padding="10dp" />
 
                 <TextView
@@ -97,7 +98,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Mobie"
+                    android:hint="Enter Your Mobile"
+                    android:singleLine="true"
                     android:padding="10dp" />
 
 
@@ -116,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Mobile"
+                    android:singleLine="true"
                     android:padding="10dp" />
 
 
@@ -144,6 +147,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
                             android:hint="Enter Your State"
+                            android:singleLine="true"
                             android:padding="10dp" />
 
 
@@ -170,6 +174,7 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
                             android:hint="Enter Your City"
+                            android:singleLine="true"
                             android:padding="10dp" />
 
 
@@ -194,6 +199,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Area"
+                    android:singleLine="true"
                     android:padding="10dp" />
 
 
@@ -213,6 +219,7 @@
                     android:background="@drawable/edit_text_bg"
                     android:gravity="start"
                     android:hint="Enter Your Area"
+                    android:singleLine="true"
                     android:inputType="textMultiLine"
                     android:maxLines="3"
                     android:padding="10dp" />
@@ -233,6 +240,7 @@
                     android:background="@drawable/edit_text_bg"
                     android:gravity="start"
                     android:hint="Enter Your Mobile"
+                    android:singleLine="true"
                     android:inputType="textMultiLine"
                     android:maxLines="3"
                     android:padding="10dp" />
@@ -260,6 +268,7 @@
                 android:padding="15dp"
                 android:layout_marginBottom="10dp"
                 android:text="Submit"
+                android:textAllCaps="true"
                 android:textColor="@color/button_color"
                 android:textStyle="bold" />
 

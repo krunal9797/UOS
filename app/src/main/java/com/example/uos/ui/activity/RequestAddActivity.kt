@@ -1,28 +1,19 @@
-package com.example.uos.ui.fragment
+package com.example.uos.ui.activity
 
-import android.annotation.SuppressLint
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.uos.R
 import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityRequestAddBinding
-import com.example.uos.databinding.ActivityRequestBinding
 import com.example.uos.databinding.DialogueBloodGroupBinding
 import com.example.uos.databinding.DialogueThanksBinding
 import com.example.uos.model.User
-import com.example.uos.ui.activity.BaseActivity
-import com.example.uos.ui.activity.RequestActivity
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.example.uos.utils.Utils
 
@@ -32,7 +23,7 @@ class RequestAddActivity : BaseActivity() {
     private lateinit var binding: ActivityRequestAddBinding
     private var user: User? = null
     lateinit var vm: ViewModel
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     private var requestMap: HashMap<String, String> = HashMap()
 
     private var a1: AlertDialog? = null
@@ -45,9 +36,8 @@ class RequestAddActivity : BaseActivity() {
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
         user = SharedPreference.getUser(applicationContext)
+        customProgressDialog = CustomProgressDialog(this)
 
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
 
         binding.edtBloodGroup.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
@@ -109,24 +99,24 @@ class RequestAddActivity : BaseActivity() {
                 requestMap["address"] = address
                 requestMap["hospital_name"] = hospital
 
-                progressDialog.show()
+                customProgressDialog.show()
                 vm.sendRequestBlood(requestMap).observe(this) { result ->
                     Log.e("TAG123456789", "onCreate: " + result.message)
                     Log.e("TAG123456789", "onCreate: " + result.error)
                     if (result != null) {
                         if (result.error == "200") {
-                            progressDialog.dismiss()
+                            customProgressDialog.dismiss()
                             //                        Toast.makeText(applicationContext, "" + result.message, Toast.LENGTH_SHORT).show()
                             showDialogue()
                         } else {
 
-                            progressDialog.dismiss()
+                            customProgressDialog.dismiss()
                             Toast.makeText(
                                 applicationContext, "" + result.message, Toast.LENGTH_SHORT
                             ).show()
                         }
                     } else {
-                        progressDialog.dismiss()
+                        customProgressDialog.dismiss()
                         Toast.makeText(applicationContext, "An error occurred", Toast.LENGTH_SHORT)
                             .show()
                     }
@@ -195,7 +185,8 @@ class RequestAddActivity : BaseActivity() {
             binding.edtAddress.setText("")
             binding.edtHospitalName.setText("")
 
-            sendNextIntent()/*            MainActivity.binding.viewPager.currentItem = 0
+            sendNextIntent()
+            /*            MainActivity.binding.viewPager.currentItem = 0
                         MainActivity.binding.viewPager.adapter?.notifyDataSetChanged()
                         MainActivity.binding.viewPager.adapter?.notifyItemChanged(0)*/
             a1?.dismiss()

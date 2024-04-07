@@ -15,6 +15,7 @@ import com.example.uos.R
 import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityRegistrationBinding
 import com.example.uos.databinding.DialogueBloodGroupBinding
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.example.uos.utils.Utils
 import java.util.Calendar
@@ -26,7 +27,7 @@ class RegistrationActivity : BaseActivity() {
     lateinit var vm: ViewModel
     private var registerMap: HashMap<String, String> = HashMap()
     private var user_donor = "user"
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     var a1: AlertDialog? = null
     var b1: AlertDialog.Builder? = null
 
@@ -36,9 +37,7 @@ class RegistrationActivity : BaseActivity() {
         setContentView(binding.root)
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
-
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
+        customProgressDialog = CustomProgressDialog(this)
 
         binding.tvLogin.setOnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))
@@ -121,7 +120,7 @@ class RegistrationActivity : BaseActivity() {
                 Utils.showToast(applicationContext, "Please Enter Password")
 
             } else
-                progressDialog.show()
+                customProgressDialog.show()
 
             registerMap["name"] = name
             registerMap["email"] = email
@@ -141,7 +140,7 @@ class RegistrationActivity : BaseActivity() {
                 Log.e("TAG123456789", "onCreate: " + result.error)
                 if (result != null) {
                     if (result.error == "200") {
-                        progressDialog.dismiss()
+                        customProgressDialog.dismiss()
 
                         SharedPreference.saveUser(applicationContext, result.user)
                         val intent = Intent(applicationContext, MainActivity::class.java)
@@ -152,12 +151,12 @@ class RegistrationActivity : BaseActivity() {
                             .show()
                     } else {
 
-                        progressDialog.dismiss()
+                        customProgressDialog.dismiss()
                         Toast.makeText(applicationContext, "" + result.message, Toast.LENGTH_SHORT)
                             .show()
                     }
                 } else {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Toast.makeText(applicationContext, "An error occurred", Toast.LENGTH_SHORT)
                         .show()
                 }

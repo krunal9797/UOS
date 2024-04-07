@@ -1,6 +1,5 @@
-package com.example.uos.ui.fragment
+package com.example.uos.ui.activity
 
-import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -17,8 +16,7 @@ import com.example.uos.databinding.ActivitySearchBinding
 import com.example.uos.databinding.DialogueBloodGroupBinding
 import com.example.uos.interfaces.ClickToCall
 import com.example.uos.model.User
-import com.example.uos.ui.activity.BaseActivity
-import com.example.uos.ui.activity.MainActivity
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.example.uos.utils.Utils
 
@@ -28,7 +26,7 @@ class SearchActivity : BaseActivity(), ClickToCall {
     lateinit var vm: ViewModel
     private var registerMap: HashMap<String, String> = HashMap()
     private var callMap: HashMap<String, String> = HashMap()
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     private lateinit var searchAdapter: SearchAdapter
     private var arrUser: ArrayList<User> = ArrayList()
     private var user: User? = null
@@ -43,14 +41,13 @@ class SearchActivity : BaseActivity(), ClickToCall {
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
         user = SharedPreference.getUser(this@SearchActivity)
+        customProgressDialog = CustomProgressDialog(this)
 
         setEvent()
+        CallApi()
     }
 
     private fun setEvent() {
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
-
         searchAdapter = SearchAdapter(arrUser, this, this@SearchActivity)
         binding.rvSearch.adapter = searchAdapter
 
@@ -97,14 +94,14 @@ class SearchActivity : BaseActivity(), ClickToCall {
 
 
     private fun callSearchApiBloodGroup(s: String) {
-        progressDialog.show()
+        customProgressDialog.show()
         registerMap.clear()
         registerMap["bloodgroup"] = s.toString()
 
         vm.getSearch(registerMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
                     arrUser.clear()
                     arrUser.addAll(result.users)
@@ -118,21 +115,21 @@ class SearchActivity : BaseActivity(), ClickToCall {
 
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Utils.showToast(this, "An error occurred")
             }
         }
     }
 
     private fun callSearchApiState(s: String) {
-        progressDialog.show()
+        customProgressDialog.show()
         registerMap.clear()
         registerMap["state"] = s.toString()
 
         vm.getSearch(registerMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
                     arrUser.clear()
                     arrUser.addAll(result.users)
@@ -145,21 +142,21 @@ class SearchActivity : BaseActivity(), ClickToCall {
                     callSearchApiCity(s)
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Utils.showToast(this, "An error occurred")
             }
         }
     }
 
     private fun callSearchApiCity(s: String) {
-        progressDialog.show()
+        customProgressDialog.show()
         registerMap.clear()
         registerMap["city"] = s.toString()
 
         vm.getSearch(registerMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
                     arrUser.clear()
                     arrUser.addAll(result.users)
@@ -172,21 +169,21 @@ class SearchActivity : BaseActivity(), ClickToCall {
                     callSearchApiArea(s)
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Utils.showToast(this, "An error occurred")
             }
         }
     }
 
     private fun callSearchApiArea(s: String) {
-        progressDialog.show()
+        customProgressDialog.show()
         registerMap.clear()
         registerMap["area"] = s.toString()
 
         vm.getSearch(registerMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
                     arrUser.clear()
                     arrUser.addAll(result.users)
@@ -199,21 +196,21 @@ class SearchActivity : BaseActivity(), ClickToCall {
                     callSearchApiAddress(s)
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Utils.showToast(this, "An error occurred")
             }
         }
     }
 
     private fun callSearchApiAddress(s: String) {
-        progressDialog.show()
+        customProgressDialog.show()
         registerMap.clear()
         registerMap["address"] = s.toString()
 
         vm.getSearch(registerMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
                     arrUser.clear()
                     arrUser.addAll(result.users)
@@ -222,12 +219,12 @@ class SearchActivity : BaseActivity(), ClickToCall {
                         searchAdapter.filterByBloodGroup(binding.edtBloodGroup.text.toString())
                     }
                 } else {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
 
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Utils.showToast(this, "An error occurred")
             }
         }
@@ -300,7 +297,7 @@ class SearchActivity : BaseActivity(), ClickToCall {
     }
 
     private fun insertData(mobile: String, id: String) {
-        progressDialog.show()
+        customProgressDialog.show()
         callMap.clear()
         callMap["uid"] = user?.id.toString()
         callMap["did"] = id
@@ -308,7 +305,7 @@ class SearchActivity : BaseActivity(), ClickToCall {
         vm.callInsert(callMap).observe(this) { result ->
             if (result != null) {
                 if (result.error == "200") {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
 
                     val intent = Intent(Intent.ACTION_DIAL).apply {
                         data = Uri.parse("tel:${mobile}")
@@ -316,11 +313,11 @@ class SearchActivity : BaseActivity(), ClickToCall {
                     startActivity(intent)
 
                 } else {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "" + result.message)
                 }
             } else {
-                progressDialog.dismiss()
+                customProgressDialog.dismiss()
                 Utils.showToast(this, "An error occurred")
             }
         }

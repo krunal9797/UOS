@@ -59,16 +59,18 @@
         tools:listitem="@layout/row_request" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/fabAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/edit_text_bg"
+        android:tint="@color/image_button"
+        android:padding="10dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="15dp"
-        android:background="@null"
         android:soundEffectsEnabled="true"
-        android:src="@drawable/baseline_add_circle_24"
-        app:fabCustomSize="48dp" />
+        android:layout_margin="15dp"
+        android:src="@drawable/baseline_add_circle_24"/>
+
 
 </RelativeLayout>

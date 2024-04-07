@@ -63,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginStart="5dp"
+                android:singleLine="true"
                 android:gravity="center"
                 android:text="gamitkrunal007@gamil.com"
                 android:textAllCaps="false"
@@ -91,7 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/bg_top_header"
-        android:layout_marginTop="-70dp"
+        android:layout_marginTop="-48dp"
         android:paddingBottom="20dp"
         android:scrollbars="none">
 
@@ -132,8 +133,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivRequest"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_request"
                             android:tint="@color/image_button" />
@@ -174,8 +175,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivSearch"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_search"
                             android:tint="@color/image_button" />
@@ -223,8 +224,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivEvent"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_event"
                             android:tint="@color/image_button" />
@@ -265,8 +266,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivGallery"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_gallery"
                             android:tint="@color/image_button" />
@@ -315,8 +316,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivDonation"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_donation"
                             android:tint="@color/image_button" />
@@ -356,8 +357,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivNearestHospital"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_hospital"
                             android:tint="@color/image_button" />
@@ -405,8 +406,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivAbout"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_about"
                             android:tint="@color/image_button" />
@@ -447,8 +448,8 @@
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/ivSetting"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_setting_"
                             android:tint="@color/image_button" />

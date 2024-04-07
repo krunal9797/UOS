@@ -32,6 +32,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:textSize="21sp"
+                    android:singleLine="true"
                     android:gravity="center"
                     android:text="Delete Account " />
 
@@ -42,34 +46,51 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_gravity="right"
-                    android:src="@drawable/admob_close_button_black_circle_white_cross" />
+                    android:src="@drawable/ic_close" />
 
 
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/ivIcon"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_launcher_background" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Delete Account " />
+                android:maxLines="3"
+                android:textSize="17sp"
+                android:text="Are you sure you want to delete your account? \nPlease Enter confirm to proceed with the deletion." />
 
-
-            <Button
-                android:id="@+id/tvDelete"
-                android:layout_width="wrap_content"
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/edt_confirm"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Confirm" />
+                android:layout_marginHorizontal="20dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Type Confirm"
+                android:padding="10dp" />
+
+
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:padding="15dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:text="Detele"
+                android:layout_marginBottom="20dp"
+                android:textAllCaps="true"
+                android:textColor="@color/button_color" />
 
 
         </LinearLayout>

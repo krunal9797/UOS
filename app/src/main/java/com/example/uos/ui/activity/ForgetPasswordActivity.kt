@@ -14,14 +14,15 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.uos.R
 import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityForgetPasswordBinding
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.example.uos.utils.Utils
 
-class ForgetPasswordActivity : AppCompatActivity() {
+class ForgetPasswordActivity : BaseActivity() {
     lateinit var binding: ActivityForgetPasswordBinding
     lateinit var vm: ViewModel
     private var forgetMap: HashMap<String, String> = HashMap()
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     var a1: AlertDialog? = null
     var b1: AlertDialog.Builder? = null
 
@@ -33,8 +34,6 @@ class ForgetPasswordActivity : AppCompatActivity() {
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
 
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
 
         binding.btnForget.setOnClickListener {
             val email = binding.edtEmail.text.toString()
@@ -51,7 +50,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
                 binding.edtPassword.requestFocusFromTouch()
                 Utils.showToast(applicationContext, "Please Enter Password")
             } else {
-                progressDialog.show()
+                customProgressDialog.show()
 
                 forgetMap["email"] = email
                 forgetMap["dob"] = dob
@@ -62,7 +61,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
 
                     if (result != null) {
                         if (result.error == "200") {
-                            progressDialog.dismiss()
+                            customProgressDialog.dismiss()
 
                             val intent = Intent(applicationContext, LoginActivity::class.java)
                             startActivity(intent)
@@ -70,12 +69,12 @@ class ForgetPasswordActivity : AppCompatActivity() {
                             Utils.showToast(applicationContext, "" + result.message)
 
                         } else {
-                            progressDialog.dismiss()
+                            customProgressDialog.dismiss()
                             Utils.showToast(applicationContext, "" + result.message)
 
                         }
                     } else {
-                        progressDialog.dismiss()
+                        customProgressDialog.dismiss()
                         Utils.showToast(applicationContext, "Error")
 
                     }

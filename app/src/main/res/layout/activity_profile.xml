@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.ProfileActivity">
+    tools:context=".ui.activity.ProfileActivity">
 
     <View
         android:id="@+id/bg_top_header"
@@ -37,18 +37,19 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
+            android:singleLine="true"
             android:text="My Profile"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+            android:textStyle="bold" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivLogout"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_gravity="center"
             android:layout_alignParentRight="true"
+            android:layout_gravity="center"
             android:padding="10dp"
             android:src="@drawable/baseline_logout_24"
             android:tint="@color/back_button" />
@@ -64,35 +65,36 @@
         android:layout_marginHorizontal="15dp"
         android:orientation="vertical">
 
-        <TextView
+        <ImageView
             android:id="@+id/tvName"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/baseline_radio_button_unchecked_24"
+            android:contentDescription="@string/app_name"
             android:gravity="center"
             android:maxLength="2"
-            android:text="KK"
+            android:src="@drawable/uos"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:tint="@color/white" />
 
 
         <ScrollView
             android:id="@+id/sv"
-            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/llbtm"
             android:layout_below="@+id/tvName"
-            android:scrollbars="none"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_marginTop="25dp"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_marginTop="5dp"
+                android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -100,8 +102,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Name"/>
+
+                    android:text="Name" />
 
                 <EditText
                     android:id="@+id/edt_name"
@@ -109,15 +111,16 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Name"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Email"/>
+                    android:layout_marginBottom="5dp"
+                    android:text="Email" />
 
                 <EditText
                     android:id="@+id/edt_email"
@@ -125,15 +128,16 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Email"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mobile"/>
+                    android:layout_marginBottom="5dp"
+                    android:text="Mobile" />
 
                 <EditText
                     android:id="@+id/edt_mobile"
@@ -141,17 +145,17 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Email"
-                    android:padding="10dp" />
-
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Blood Group"/>
+                    android:layout_marginBottom="5dp"
+                    android:text="Blood Group" />
 
                 <EditText
                     android:id="@+id/edt_bloodGroup"
@@ -159,8 +163,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Choose Blood Group"
-                    android:padding="10dp" />
-
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
 
                 <LinearLayout
@@ -170,16 +174,18 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
-                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="10dp"
-                            android:text="State"/>
+                            android:layout_marginBottom="5dp"
+                            android:singleLine="true"
+                            android:text="State" />
 
                         <EditText
                             android:id="@+id/edt_state"
@@ -187,25 +193,27 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
                             android:hint="Enter Your State"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:singleLine="true" />
 
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_marginStart="10dp"
                         android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
-                            android:layout_marginBottom="5dp"
                             android:layout_marginTop="10dp"
-                            android:text="City"/>
+                            android:layout_marginBottom="5dp"
+                            android:singleLine="true"
+                            android:text="City" />
 
                         <EditText
                             android:id="@+id/edt_city"
@@ -213,7 +221,8 @@
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
                             android:hint="Enter Your City"
-                            android:padding="10dp" />
+                            android:padding="10dp"
+                            android:singleLine="true" />
 
 
                     </LinearLayout>
@@ -222,14 +231,13 @@
                 </LinearLayout>
 
 
-
                 <TextView
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Area"/>
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Area" />
 
                 <EditText
                     android:id="@+id/edt_area"
@@ -237,38 +245,38 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Area"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
-                    android:text="Address"/>
-
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Address" />
 
                 <EditText
                     android:id="@+id/edt_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Area"
                     android:gravity="start"
-                    android:maxLines="3"
-                    android:maxLength="130"
+                    android:hint="Enter Your Area"
                     android:inputType="textMultiLine"
-                    android:padding="10dp" />
+                    android:maxLength="130"
+                    android:maxLines="3"
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Date of Birth"/>
-
+                    android:layout_marginBottom="5dp"
+                    android:text="Date of Birth" />
 
                 <EditText
                     android:id="@+id/edt_dob"
@@ -276,8 +284,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Birthdate"
-
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
 
                 <RadioGroup
@@ -309,10 +317,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Last Donate"/>
-
+                    android:layout_marginBottom="5dp"
+                    android:text="Last Donate" />
 
                 <EditText
                     android:id="@+id/edt_lastDonate"
@@ -320,7 +327,8 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Last Donate"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
 
                 <TextView
@@ -328,10 +336,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
-                    android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Password"/>
-
+                    android:layout_marginBottom="5dp"
+                    android:text="Password" />
 
                 <EditText
                     android:id="@+id/edt_password"
@@ -340,8 +347,13 @@
                     android:background="@drawable/edit_text_bg"
                     android:hint="Enter Your Password"
                     android:inputType="textPassword"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:singleLine="true" />
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent" />
 
             </LinearLayout>
 
@@ -360,18 +372,15 @@
                 android:id="@+id/btnUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:background="@drawable/button_bg"
                 android:gravity="center"
                 android:padding="15dp"
                 android:text="Update"
-                android:layout_marginBottom="15dp"
                 android:textColor="@color/button_color"
                 android:textStyle="bold" />
 
         </LinearLayout>
-
-
-
 
 
     </RelativeLayout>

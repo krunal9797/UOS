@@ -59,12 +59,12 @@ class SearchAdapter(private var arrUser: ArrayList<User>, var context: Context,v
         val user = filteredList[position]
 
         holder.binding.tvBloodGroup.text = ""+user.bloodgroup
-        holder.binding.tvName.text = ""+user.name
+        holder.binding.tvName.text = "Name : "+user.name
         Log.e("TAG123456789", "onBindViewHolder: "+user.mobile)
-        holder.binding.tvMobile.text = ""+user.mobile
-        holder.binding.tvState.text = ""+user.state
-        holder.binding.tvCity.text = ""+user.city
-        holder.binding.tvArea.text = ""+user.area
+        holder.binding.tvMobile.text = "Mobile : "+user.mobile
+        holder.binding.tvState.text = "State : "+user.state
+        holder.binding.tvCity.text = "City : "+user.city
+        holder.binding.tvArea.text = "Area : "+user.area
 
         Log.e("TAG123456789", "onBindViewHolder: last donate "+user.last_donate )
 
@@ -81,16 +81,15 @@ class SearchAdapter(private var arrUser: ArrayList<User>, var context: Context,v
 
 // Check if user.last_donate is equal to "0" or 0
         if ("0".equals(user.last_donate) || Integer.parseInt(user.last_donate) == 0) {
-            holder.binding.tvLastDonate.setVisibility(View.INVISIBLE);
+            holder.binding.tvLastDonate.visibility = View.INVISIBLE;
         } else {
-            holder.binding.tvLastDonate.setVisibility(View.VISIBLE);
-            holder.binding.tvLastDonate.setText(user.last_donate);
+            holder.binding.tvLastDonate.visibility = View.VISIBLE;
+            holder.binding.tvLastDonate.text = "Last Donate : "+user.last_donate;
         }
 
 
         holder.binding.ivCall.setOnClickListener {
             clickToCall.onClickCall(user)
-
         }
 
 

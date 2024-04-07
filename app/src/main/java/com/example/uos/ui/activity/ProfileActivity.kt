@@ -1,7 +1,6 @@
-package com.example.uos.ui.fragment
+package com.example.uos.ui.activity
 
 import android.app.DatePickerDialog
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -14,9 +13,7 @@ import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityProfileBinding
 import com.example.uos.databinding.DialogueBloodGroupBinding
 import com.example.uos.model.User
-import com.example.uos.ui.activity.BaseActivity
-import com.example.uos.ui.activity.LoginActivity
-import com.example.uos.ui.activity.MainActivity
+import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.example.uos.utils.Utils
 import java.util.Calendar
@@ -28,7 +25,7 @@ class ProfileActivity : BaseActivity() {
     private lateinit var vm: ViewModel
     private var registerMap: HashMap<String, String> = HashMap()
     private var user_donor = "user"
-    private lateinit var progressDialog: ProgressDialog
+    private lateinit var customProgressDialog: CustomProgressDialog
     private var a1: AlertDialog? = null
     private var b1: AlertDialog.Builder? = null
     private var user: User? = null
@@ -41,6 +38,7 @@ class ProfileActivity : BaseActivity() {
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
         user = SharedPreference.getUser(this@ProfileActivity)
+        customProgressDialog = CustomProgressDialog(this)
         activity = intent.getStringExtra("activity").toString()
 
         binding.ivBack.setOnClickListener {
@@ -80,27 +78,32 @@ class ProfileActivity : BaseActivity() {
 
             if (user?.user_donor.equals("user"))
             {
-                binding.rbUser.isChecked =false
-                binding.rbDonor.isChecked =true
+                binding.rbUser.isChecked =true
+                binding.rbDonor.isChecked =false
+                binding.tvLastDonate.visibility = View.GONE
+                binding.edtLastDonate.visibility = View.GONE
             }
             else if (user?.user_donor.equals("donor"))
             {
                 binding.rbUser.isChecked =false
                 binding.rbDonor.isChecked =true
+
+                binding.tvLastDonate.visibility = View.VISIBLE
+                binding.edtLastDonate.visibility = View.VISIBLE
             }
             else
             {
                 binding.rbUser.isChecked =false
                 binding.rbDonor.isChecked =false
+
+                binding.tvLastDonate.visibility = View.GONE
+                binding.edtLastDonate.visibility = View.GONE
             }
 
 
 
+
         }
-
-
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("Loading...")
 
         binding.edtBloodGroup.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
@@ -120,6 +123,8 @@ class ProfileActivity : BaseActivity() {
             if (isChecked) {
                 user_donor = "user"
                 binding.edtLastDonate.visibility = View.GONE
+                binding.tvLastDonate.visibility = View.GONE
+
             }
         }
 
@@ -127,6 +132,8 @@ class ProfileActivity : BaseActivity() {
             if (isChecked) {
                 user_donor = "donor"
                 binding.edtLastDonate.visibility = View.VISIBLE
+                binding.tvLastDonate.visibility = View.VISIBLE
+
             }
         }
 
@@ -175,7 +182,7 @@ class ProfileActivity : BaseActivity() {
                 Utils.showToast(this, "Please Enter New Password")
 
             } else
-                progressDialog.show()
+                customProgressDialog.show()
 
             registerMap["name"] = name
             registerMap["email"] = email
@@ -195,16 +202,16 @@ class ProfileActivity : BaseActivity() {
                 Log.e("TAG123456789", "onCreate: " + result.error)
                 if (result != null) {
                     if (result.error == "200") {
-                        progressDialog.dismiss()
+                        customProgressDialog.dismiss()
                         SharedPreference.saveUser(this, result.user)
                         Utils.showToast(this,"Profile Update Successfully")
                         //loadFragment(SettingFragment())
                     } else {
-                        progressDialog.dismiss()
+                        customProgressDialog.dismiss()
                         Utils.showToast(this, "" + result.message)
                     }
                 } else {
-                    progressDialog.dismiss()
+                    customProgressDialog.dismiss()
                     Utils.showToast(this, "An error occurred")
                 }
             }

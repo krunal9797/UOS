@@ -6,8 +6,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvBg"
-        android:layout_width="573px"
-        android:layout_height="409px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:outlineAmbientShadowColor="@color/black"
         android:outlineSpotShadowColor="@color/black"
@@ -19,15 +19,15 @@
 
         <RelativeLayout
             android:id="@+id/rlbg"
-            android:layout_width="573px"
-            android:layout_height="409px">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/ivImage"
-                android:layout_width="573px"
-                android:layout_height="409px"
+                android:layout_width="842px"
+                android:layout_height="680px"
                 android:layout_centerInParent="true"
-                android:scaleType="fitCenter" />
+                android:scaleType="center" />
 
             <TextView
                 android:id="@+id/tvTitle"
@@ -35,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="10dp"
                 android:background="#80FFFFFF"
                 android:gravity="center"
                 android:padding="10dp"
@@ -47,10 +46,11 @@
                 android:id="@+id/ivClose"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_marginEnd="15dp"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center"
                 android:padding="10dp"
-                android:src="@drawable/admob_close_button_black_circle_white_cross"
+                android:src="@drawable/ic_close"
                 android:tint="@color/back_button" />
 
 
