@@ -19,7 +19,7 @@
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="1070px"
-            android:src="@drawable/introscreen_1"
+            android:src="@drawable/intro_1"
             android:contentDescription="@string/app_name"
             tools:ignore="PxUsage" />
 
@@ -37,7 +37,8 @@
                 android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:textSize="21sp"
-                android:maxLength="20"
+                android:gravity="center"
+                android:maxLines="2"
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:text="@string/app_name"
@@ -49,6 +50,7 @@
                 android:layout_gravity="center"
                 android:justificationMode="inter_word"
                 android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/black"

@@ -5,14 +5,16 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.example.uos.R
 import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityLoginBinding
 import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
+import com.example.uos.utils.Utils
 
 class LoginActivity : BaseActivity() {
     lateinit var binding: ActivityLoginBinding
-    var isEmailVisible = false
+    var isEmailVisible = true
 
     lateinit var vm: ViewModel
     private var registerMap: HashMap<String, String> = HashMap()
@@ -108,9 +110,8 @@ class LoginActivity : BaseActivity() {
                 if (result.error == "200") {
                     customProgressDialog.dismiss()
 
-                    Toast.makeText(
-                        applicationContext, "" + result.user.name, Toast.LENGTH_SHORT
-                    ).show()
+                    Utils.showToast(this,""+getString(R.string.login_successfully))
+
                     SharedPreference.saveUser(applicationContext, result.user)
                     val intent = Intent(applicationContext, MainActivity::class.java)
                     startActivity(intent)
@@ -119,15 +120,13 @@ class LoginActivity : BaseActivity() {
                 } else {
                     customProgressDialog.dismiss()
 
-                    Toast.makeText(
-                        applicationContext, "" + result.message, Toast.LENGTH_SHORT
-                    ).show()
+                    Utils.showToast(this,""+result.message)
                 }
             } else {
                 customProgressDialog.dismiss()
-                Toast.makeText(
-                    applicationContext, "An error occurred", Toast.LENGTH_SHORT
-                ).show()
+
+                Utils.showToast(this, getString(R.string.an_error_occurred))
+
             }
         }
 

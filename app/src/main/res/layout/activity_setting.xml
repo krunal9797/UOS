@@ -93,7 +93,7 @@
             android:background="@drawable/edit_text_bg"
             android:gravity="start|center"
             android:padding="10dp"
-            app:trackTint="@color/thumb_button"
+            app:trackTint="@color/black"
             android:buttonTint="@color/thumb_button"
             android:text="Notification" />
 
