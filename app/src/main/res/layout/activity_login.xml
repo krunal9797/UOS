@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unity Of South Gujarat"
+            android:text="@string/unity_of_south_gujarat"
             android:textColor="@color/white"
             android:textAllCaps="true"
             android:layout_gravity="center"
@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/white"
             android:textAllCaps="true"
             android:layout_gravity="center"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
             android:layout_marginBottom="5dp"
-            android:text="Email" />
+            android:text="@string/email" />
 
         <EditText
             android:id="@+id/edt_email"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bg"
             android:singleLine="true"
-            android:hint="Enter Your Email"
+            android:hint="@string/enter_your_email"
             android:padding="10dp" />
 
 
@@ -105,14 +105,14 @@
             android:layout_marginTop="10dp"
             android:layout_marginStart="3dp"
             android:layout_marginBottom="5dp"
-            android:text="Password" />
+            android:text="@string/password" />
 
         <EditText
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bg"
-            android:hint="Enter Your Password"
+            android:hint="@string/enter_your_password"
             android:singleLine="true"
             android:maxLength="25"
             android:padding="10dp" />
@@ -128,7 +128,7 @@
             android:textStyle="bold"
             android:singleLine="true"
             android:textAllCaps="true"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/button_color" />
 
 
@@ -142,7 +142,7 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/text_view"
             android:singleLine="true"
-            android:text="Login With Mobile Number" />
+            android:text="@string/login_with_mobile_number" />
 
         <TextView
             android:id="@+id/tvLoginWithEmail"

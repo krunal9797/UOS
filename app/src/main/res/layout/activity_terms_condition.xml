@@ -39,7 +39,7 @@
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
             android:singleLine="true"
-            android:text="Terms and Condition"
+            android:text="@string/terms_conditions"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />

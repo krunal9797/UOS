@@ -38,7 +38,7 @@
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
             android:singleLine="true"
-            android:text="My Profile"
+            android:text="@string/my_profile"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -102,15 +102,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
-
-                    android:text="Name" />
+                    android:text="@string/name" />
 
                 <EditText
                     android:id="@+id/edt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Name"
+                    android:hint="@string/enter_your_name"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -120,14 +119,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Email" />
+                    android:text="@string/email" />
 
                 <EditText
                     android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Email"
+                    android:hint="@string/enter_your_email"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -137,14 +136,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Mobile" />
+                    android:text="@string/mobile" />
 
                 <EditText
                     android:id="@+id/edt_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Email"
+                    android:hint="@string/enter_your_mobile"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -155,14 +154,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Blood Group" />
+                    android:text="@string/blood_group" />
 
                 <EditText
                     android:id="@+id/edt_bloodGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Choose Blood Group"
+                    android:hint="@string/choose_blood_group"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -185,14 +184,14 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="5dp"
                             android:singleLine="true"
-                            android:text="State" />
+                            android:text="@string/state" />
 
                         <EditText
                             android:id="@+id/edt_state"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
-                            android:hint="Enter Your State"
+                            android:hint="@string/enter_your_state"
                             android:padding="10dp"
                             android:singleLine="true" />
 
@@ -213,14 +212,14 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="5dp"
                             android:singleLine="true"
-                            android:text="City" />
+                            android:text="@string/city" />
 
                         <EditText
                             android:id="@+id/edt_city"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
-                            android:hint="Enter Your City"
+                            android:hint="@string/enter_your_city"
                             android:padding="10dp"
                             android:singleLine="true" />
 
@@ -237,14 +236,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Area" />
+                    android:text="@string/area" />
 
                 <EditText
                     android:id="@+id/edt_area"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Area"
+                    android:hint="@string/enter_your_area"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -254,7 +253,7 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Address" />
+                    android:text="@string/address" />
 
                 <EditText
                     android:id="@+id/edt_address"
@@ -262,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:gravity="start"
-                    android:hint="Enter Your Area"
+                    android:hint="@string/enter_your_address"
                     android:inputType="textMultiLine"
                     android:maxLength="130"
                     android:maxLines="3"
@@ -276,14 +275,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Date of Birth" />
+                    android:text="@string/date_of_birth" />
 
                 <EditText
                     android:id="@+id/edt_dob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Birthdate"
+                    android:hint="@string/enter_birthdate"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -304,7 +303,7 @@
                         android:drawableStart="@android:color/transparent"
                         android:drawablePadding="10dp"
                         android:layout_marginStart="10dp"
-                        android:text="User" />
+                        android:text="@string/user" />
 
                     <RadioButton
                         android:id="@+id/rbDonor"
@@ -315,7 +314,7 @@
                         android:drawableStart="@android:color/transparent"
                         android:drawablePadding="10dp"
                         android:layout_marginStart="10dp"
-                        android:text="Donor" />
+                        android:text="@string/donor" />
 
                 </RadioGroup>
 
@@ -327,14 +326,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Last Donate" />
+                    android:text="@string/last_donate" />
 
                 <EditText
                     android:id="@+id/edt_lastDonate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Last Donate"
+                    android:hint="@string/enter_last_donate"
                     android:padding="10dp"
                     android:singleLine="true" />
 
@@ -346,14 +345,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="5dp"
-                    android:text="Password" />
+                    android:text="@string/password" />
 
                 <EditText
                     android:id="@+id/edt_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Password"
+                    android:hint="@string/enter_your_password"
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:singleLine="true" />
@@ -384,7 +383,7 @@
                 android:background="@drawable/button_bg"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Update"
+                android:text="@string/update"
                 android:textColor="@color/button_color"
                 android:textStyle="bold" />
 

@@ -38,7 +38,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
-            android:text="Setting"
+            android:text="@string/setting"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -82,7 +82,7 @@
             android:padding="10dp"
             android:drawableTint="@color/text_view"
             android:textColor="@color/text_view"
-            android:text="Profile" />
+            android:text="@string/profile" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/swtNotification"
@@ -93,9 +93,10 @@
             android:background="@drawable/edit_text_bg"
             android:gravity="start|center"
             android:padding="10dp"
-            app:trackTint="@color/black"
+            app:trackTint="@color/thumb_button"
+            app:thumbTint="@color/thumb_button"
             android:buttonTint="@color/thumb_button"
-            android:text="Notification" />
+            android:text="@string/notification" />
 
         <TextView
             android:id="@+id/tvLanguage"
@@ -109,7 +110,7 @@
             android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
             android:gravity="start|center"
             android:padding="10dp"
-            android:text="Language" />
+            android:text="@string/language" />
 
         <TextView
             android:id="@+id/tvAboutUS"
@@ -123,7 +124,7 @@
             android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
             android:gravity="start|center"
             android:padding="10dp"
-            android:text="About Us" />
+            android:text="@string/about_us" />
 
         <TextView
             android:id="@+id/tvPrivacyPolicy"
@@ -137,7 +138,7 @@
             android:padding="10dp"
             android:drawableTint="@color/text_view"
             android:textColor="@color/text_view"
-            android:text="Privacy Policy" />
+            android:text="@string/privacy_policy" />
 
         <TextView
             android:id="@+id/tvTermsCondition"
@@ -151,7 +152,7 @@
             android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
             android:gravity="start|center"
             android:padding="10dp"
-            android:text="Terms Conditions" />
+            android:text="@string/terms_conditions" />
 
         <TextView
             android:id="@+id/tvDeleteAccount"
@@ -165,7 +166,7 @@
             android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
             android:gravity="start|center"
             android:padding="10dp"
-            android:text="Delete Account" />
+            android:text="@string/delete_account" />
 
     </LinearLayout>
 

@@ -41,7 +41,7 @@
             android:layout_toLeftOf="@+id/ivDone"
             android:layout_toRightOf="@+id/ivBack"
             android:gravity="center"
-            android:text="Choose Language"
+            android:text="@string/choose_language"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />

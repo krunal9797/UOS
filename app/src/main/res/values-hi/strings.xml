@@ -1,2 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">UOS - रक्त बैंक</string>
+
+    <string name="hello_blank_fragment">नमस्ते खाली फ्रेग्मेंट</string>
+
+    <string name="g_one">रक्त परीक्षण</string>
+    <string name="g_one_description">आपने बिना किसी खर्च के अपने रक्त की जाँच की। आपका लाभ लेने के लिए इस सेवा का आज ही लाभ उठाएं, जिससे आपके वेलबीन का विस्तारित ज्ञान मिले।</string>
+
+    <string name="g_two">रक्तदान</string>
+    <string name="g_two_description">आपका रक्तदान किसी की जान बचाने का एक संभावित रास्ता है। हर बूंद एक उज्ज्वल भविष्य की ओर सवार होती है, जहाँ हर बूंद किसी न किसी के जीवन को बचाने में मदद करती है।</string>
+
+    <string name="g_three">धन्यवाद</string>
+    <string name="g_three_description">आपके जीवन को बचाने के लिए आपके रक्तदान के लिए हृदय से आभार प्रकट करते हैं। आपकी उदारता ने अनगिनत जीवों की रोशनी बढ़ाई है, जो निःस्वार्थता और दयालुता के निर्मल संदेश को व्यक्त करते हैं।</string>
+
+
+    <string name="login_successfully">सफलतापूर्वक लॉगिन किया गया</string>
+    <string name="an_error_occurred">कोई त्रुटि हुई</string>
+    <string name="donation">दान</string>
+    <string name="support_us_with_your_donations">अपने दानों से हमें समर्थन दें!</string>
+    <string name="money">पैसे</string>
+    <string name="book">पुस्तक</string>
+    <string name="food">खाद्य</string>
+    <string name="cloth">कपड़ा</string>
+    <string name="old_equipment">पुरानी उपकरण</string>
+    <string name="tree_plantation">वृक्ष रोपण</string>
+    <string name="more_inquiry">और पूछताछ</string>
+    <string name="chat_with_us">हमारे साथ चैट करें</string>
+    <string name="mobile_number_not_available">मोबाइल नंबर उपलब्ध नहीं है</string>
+    <string name="event">घटना</string>
+    <string name="forget_password">पासवर्ड भूल गए</string>
+    <string name="email">ईमेल</string>
+    <string name="enter_your_email">अपना ईमेल दर्ज करें</string>
+    <string name="date_of_birth">जन्म तिथि</string>
+    <string name="enter_birthdate">जन्म तिथि दर्ज करें</string>
+    <string name="password">पासवर्ड</string>
+    <string name="enter_your_new_password">अपना नया पासवर्ड दर्ज करें</string>
+    <string name="change_password">पासवर्ड बदलें</string>
+    <string name="please_enter_email">कृपया ईमेल दर्ज करें</string>
+    <string name="please_enter_dob">कृपया जन्म तिथि दर्ज करें</string>
+    <string name="please_enter_password">कृपया पासवर्ड दर्ज करें</string>
+    <string name="skip">छोड़ें</string>
+    <string name="done">हो गया</string>
+    <string name="next">आगे</string>
+    <string name="choose_language">भाषा चुनें</string>
+    <string name="unity_of_south_gujarat">दक्षिण गुजरात की एकता</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="enter_your_password">अपना पासवर्ड दर्ज करें</string>
+    <string name="login_with_mobile_number">मोबाइल नंबर के साथ लॉगिन करें</string>
+    <string name="blood_request">रक्त अनुरोध</string>
+    <string name="search_blood">रक्त खोजें</string>
+    <string name="gallery">गैलरी</string>
+    <string name="nearest_hospital">निकटतम अस्पताल</string>
+    <string name="setting">सेटिंग्स</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="my_profile">मेरा प्रोफ़ाइल</string>
+    <string name="name">नाम</string>
+    <string name="enter_your_name">अपना नाम दर्ज करें</string>
+    <string name="mobile">मोबाइल</string>
+    <string name="enter_your_mobile">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="blood_group">रक्त समूह</string>
+    <string name="choose_blood_group">रक्त समूह चुनें</string>
+    <string name="state">राज्य</string>
+    <string name="enter_your_state">अपना राज्य दर्ज करें</string>
+    <string name="city">शहर</string>
+    <string name="enter_your_city">अपना शहर दर्ज करें</string>
+    <string name="area">क्षेत्र</string>
+    <string name="enter_your_area">अपना क्षेत्र दर्ज करें</string>
+    <string name="address">पता</string>
+    <string name="enter_your_address">अपना पता दर्ज करें</string>
+    <string name="user">उपयोगकर्ता</string>
+    <string name="donor">दाता</string>
+    <string name="last_donate">अंतिम दान</string>
+    <string name="enter_last_donate">अंतिम दान दर्ज करें</string>
+    <string name="update">अपडेट</string>
+    <string name="register">रजिस्टर</string>
+    <string name="request_blood_form">रक्त अनुरोध फॉर्म</string>
+    <string name="hospital">अस्पताल</string>
+    <string name="enter_hospital_name">अस्पताल का नाम दर्ज करें</string>
+    <string name="submit">प्रस्तुत करें</string>
+    <string name="please_enter_name">कृपया नाम दर्ज करें</string>
+    <string name="please_enter_mobile">कृपया मोबाइल नंबर दर्ज करें</string>
+    <string name="please_choose_state">कृपया राज्य चुनें</string>
+    <string name="please_choose_city">कृपया शहर चुनें</string>
+    <string name="please_choose_area">कृपया क्षेत्र चुनें</string>
+    <string name="please_choose_address">कृपया पता चुनें</string>
+    <string name="please_choose_hospital">कृपया अस्पताल चुनें</string>
+    <string name="search">खोजें</string>
+    <string name="search_via_area_city_state">क्षेत्र, शहर, राज्य के माध्यम से खोजें</string>
+    <string name="o">O+</string>
+    <string name="profile">प्रोफ़ाइल</string>
+    <string name="notification">सूचना</string>
+    <string name="language">भाषा</string>
+    <string name="terms_conditions">शर्तें और नियम</string>
+    <string name="delete_account">खाता हटाएं</string>
+    <string name="type_confirm_to_delete_account">खाता हटाने के लिए पुष्टि करें</string>
+    <string name="welcome_nto_nunity_of_south_gujarat">आपका स्वागत है \nदक्षिण गुजरात की एकता में</string>
+    <string name="name_">नाम : </string>
+    <string name="mobile_">मोबाइल : </string>
+    <string name="state_">राज्य : </string>
+    <string name="city_">शहर : </string>
+    <string name="area_">क्षेत्र : </string>
+    <string name="address_">पता : </string>
+    <string name="hospital_">अस्पताल : </string>
+    <string name="date_time">तारीख और समय : </string>
+    <string name="address_not_found">पता नहीं मिला</string>
+    <string name="last_donate_">आखिरी दान: </string>
+
+    <string name="forgot_your_password_no_worry_click_here">पासवर्ड भूल गए? <b>यहाँ क्लिक करें</b></string>
+    <string name="not_have_an_account_signup_here">खाता नहीं है? <b>यहाँ साइन अप करें</b></string>
+    <string name="already_have_an_account_click_here">पहले से खाता है? <b>यहाँ क्लिक करें</b></string>
+
+    <string name="good_night">शुभ रात्रि</string>
+    <string name="good_morning">सुप्रभात</string>
+    <string name="good_afternoon">शुभ अपराह्न</string>
+    <string name="good_evening">शुभ संध्या</string>
+    <string name="welcome_to_uos">UOS में आपका स्वागत है</string>
+
+</resources>

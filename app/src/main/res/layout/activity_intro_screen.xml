@@ -32,7 +32,7 @@
             android:gravity="center"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:text="Skip"
+            android:text="@string/skip"
             android:textAllCaps="true"
             android:textSize="17sp"
              android:textStyle="bold" />
@@ -86,7 +86,7 @@
                 android:singleLine="true"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:text="Next"
+                android:text="@string/next"
                 android:textAllCaps="true"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -101,7 +101,7 @@
                 android:singleLine="true"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:text="Done"
+                android:text="@string/done"
                 android:textAllCaps="true"
                 android:textSize="17sp"
                 android:visibility="gone"

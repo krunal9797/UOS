@@ -40,7 +40,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
-            android:text="Privacy Policy"
+            android:text="@string/privacy_policy"
             android:singleLine="true"
             android:textColor="@color/white"
             android:textSize="21sp"

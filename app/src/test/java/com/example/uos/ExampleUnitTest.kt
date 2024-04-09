@@ -1,4 +1,4 @@
-package com.example.uos
+package com.krunal.uos
 
 import org.junit.Test
 

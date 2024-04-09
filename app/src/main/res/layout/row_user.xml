@@ -30,9 +30,10 @@
                 <TextView
                     android:id="@+id/tvName"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:singleLine="true"
                     android:gravity="center_vertical"
                     android:padding="5dp"
                     android:hint="Name" />
@@ -40,8 +41,8 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivCall"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:src="@drawable/baseline_add_ic_call_24"
                     android:padding="8dp"
@@ -49,9 +50,9 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ivLocation"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
                     android:layout_gravity="center"
                     android:src="@drawable/baseline_location_pin_24"
                     android:padding="8dp"

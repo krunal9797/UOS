@@ -40,7 +40,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
-            android:text="Request Blood"
+            android:text="@string/blood_request"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="21sp" />

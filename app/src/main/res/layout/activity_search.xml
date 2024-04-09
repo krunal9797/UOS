@@ -44,7 +44,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginStart="10dp"
                 android:layout_toRightOf="@+id/ivBack"
-                android:text="Search Blood"
+                android:text="@string/search_blood"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="21sp" />
@@ -72,15 +72,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
-                    android:textColor="@color/white"
-                    android:text="Search" />
+                    android:text="@string/search"
+                    android:textColor="@color/white" />
 
                 <EditText
                     android:id="@+id/edtSearch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Area,City,State "
+                    android:hint="@string/search_via_area_city_state"
                     android:singleLine="true"
                     android:textColor="@color/black"
                     android:padding="10dp" />
@@ -104,14 +104,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:textColor="@color/white"
-                    android:text="Blood group" />
+                    android:text="@string/blood_group" />
 
                 <EditText
                     android:id="@+id/edt_bloodGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:text="O+"
+                    android:text="@string/o"
                     android:gravity="center"
                     android:singleLine="true"
                     android:textColor="@color/black"

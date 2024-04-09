@@ -91,15 +91,15 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uos.ui.activity.NotificationActivity"
+            android:name="com.krunal.uos.ui.activity.NotificationActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uos.ui.activity.SettingActivity"
+            android:name="com.krunal.uos.ui.activity.SettingActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.example.uos.ui.activity.ProfileActivity"
+            android:name="com.krunal.uos.ui.activity.ProfileActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
     </application>

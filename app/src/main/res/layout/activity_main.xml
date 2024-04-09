@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:gravity="start|center"
-                android:text="Good Morning Krunal"
+                android:text=""
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="15sp"
@@ -65,7 +65,7 @@
                 android:layout_marginStart="5dp"
                 android:singleLine="true"
                 android:gravity="center"
-                android:text="gamitkrunal007@gamil.com"
+                android:text=""
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="15sp"
@@ -146,7 +146,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="Blood Request"
+                            android:text="@string/blood_request"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -188,7 +188,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="Search"
+                            android:text="@string/search_blood"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -237,7 +237,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="Event"
+                            android:text="@string/event"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -279,7 +279,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="Gallery"
+                            android:text="@string/gallery"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -329,7 +329,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="Donation"
+                            android:text="@string/donation"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -370,7 +370,7 @@
                             android:gravity="center"
                             android:maxLength="20"
                             android:singleLine="true"
-                            android:text="Nearest Hospital"
+                            android:text="@string/nearest_hospital"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -419,7 +419,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="About Us"
+                            android:text="@string/about_us"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />
@@ -461,7 +461,7 @@
                             android:gravity="center"
                             android:maxLength="15"
                             android:singleLine="true"
-                            android:text="Setting"
+                            android:text="@string/setting"
                             android:textColor="@color/text_view"
                             android:textSize="17sp"
                             android:textStyle="bold" />

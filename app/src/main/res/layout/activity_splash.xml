@@ -16,11 +16,12 @@
         android:layout_centerInParent="true"
         android:layout_width="350dp"
         app:lottie_speed="3.5"
+        android:background="@color/white"
         android:layout_height="350dp"/>
 
     <TextView
         android:layout_above="@+id/lottie"
-        android:text="Welcome \nTo\nUnity of south gujarat"
+        android:text="@string/welcome_nto_nunity_of_south_gujarat"
         android:textAllCaps="true"
         android:padding="10dp"
         android:gravity="center"

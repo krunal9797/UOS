@@ -39,7 +39,7 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
             android:layout_toRightOf="@+id/ivBack"
-            android:text="Request Blood Form"
+            android:text="@string/request_blood_form"
             android:textColor="@color/white"
             android:textSize="21sp"
             android:textStyle="bold" />
@@ -73,14 +73,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Name" />
+                    android:text="@string/name" />
 
                 <EditText
                     android:id="@+id/edt_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Name"
+                    android:hint="@string/enter_your_name"
                     android:singleLine="true"
                     android:padding="10dp" />
 
@@ -91,14 +91,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mobile" />
+                    android:text="@string/mobile" />
 
                 <EditText
                     android:id="@+id/edt_mobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Mobile"
+                    android:hint="@string/enter_your_mobile"
                     android:singleLine="true"
                     android:padding="10dp" />
 
@@ -110,14 +110,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mobile" />
+                    android:text="@string/blood_group" />
 
                 <EditText
                     android:id="@+id/edt_bloodGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Mobile"
+                    android:hint="@string/blood_group"
                     android:singleLine="true"
                     android:padding="10dp" />
 
@@ -139,14 +139,14 @@
                             android:layout_marginStart="3dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="5dp"
-                            android:text="State" />
+                            android:text="@string/state" />
 
                         <EditText
                             android:id="@+id/edt_state"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
-                            android:hint="Enter Your State"
+                            android:hint="@string/enter_your_state"
                             android:singleLine="true"
                             android:padding="10dp" />
 
@@ -166,14 +166,14 @@
                             android:layout_marginStart="3dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="5dp"
-                            android:text="City" />
+                            android:text="@string/city" />
 
                         <EditText
                             android:id="@+id/edt_city"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/edit_text_bg"
-                            android:hint="Enter Your City"
+                            android:hint="@string/enter_your_city"
                             android:singleLine="true"
                             android:padding="10dp" />
 
@@ -191,14 +191,14 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Area" />
+                    android:text="@string/area" />
 
                 <EditText
                     android:id="@+id/edt_area"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="Enter Your Area"
+                    android:hint="@string/enter_your_area"
                     android:singleLine="true"
                     android:padding="10dp" />
 
@@ -210,7 +210,7 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Address" />
+                    android:text="@string/address" />
 
                 <EditText
                     android:id="@+id/edt_address"
@@ -218,7 +218,7 @@
                     android:layout_height="90dp"
                     android:background="@drawable/edit_text_bg"
                     android:gravity="start"
-                    android:hint="Enter Your Area"
+                    android:hint="@string/enter_your_address"
                     android:singleLine="true"
                     android:inputType="textMultiLine"
                     android:maxLines="3"
@@ -231,7 +231,7 @@
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginTop="10dp"
-                    android:text="Mobile" />
+                    android:text="@string/hospital" />
 
                 <EditText
                     android:id="@+id/edt_hospitalName"
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_text_bg"
                     android:gravity="start"
-                    android:hint="Enter Your Mobile"
+                    android:hint="@string/enter_hospital_name"
                     android:singleLine="true"
                     android:inputType="textMultiLine"
                     android:maxLines="3"
@@ -267,7 +267,7 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:layout_marginBottom="10dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textAllCaps="true"
                 android:textColor="@color/button_color"
                 android:textStyle="bold" />
