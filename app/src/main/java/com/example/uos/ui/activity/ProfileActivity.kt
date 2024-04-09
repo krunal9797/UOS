@@ -45,6 +45,7 @@ class ProfileActivity : BaseActivity() {
             backEvent()
         }
 
+
         binding.ivLogout.setOnClickListener {
             SharedPreference.clearUser(this)
             startActivity(Intent(this, LoginActivity::class.java))
@@ -245,7 +246,7 @@ class ProfileActivity : BaseActivity() {
         month = gc1.get(Calendar.MONTH)
         day = gc1.get(Calendar.DAY_OF_MONTH)
         val dp = DatePickerDialog(
-            this, R.style.TransparentDialog,
+            this, R.style.CustomDatePickerDialogStyle,
             { datePicker, Year, Month, Day -> binding.edtDob.setText(Day.toString() + "/" + (Month + 1) + "/" + Year) },
             year,
             month,

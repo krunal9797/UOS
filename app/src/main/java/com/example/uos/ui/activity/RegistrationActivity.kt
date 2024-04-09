@@ -45,8 +45,6 @@ class RegistrationActivity : BaseActivity() {
         }
 
 
-
-
         binding.edtBloodGroup.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 showBloodDialogue()
@@ -172,7 +170,7 @@ class RegistrationActivity : BaseActivity() {
         year = gc1.get(Calendar.YEAR)
         month = gc1.get(Calendar.MONTH)
         day = gc1.get(Calendar.DAY_OF_MONTH)
-        val dp = DatePickerDialog(applicationContext,R.style.TransparentDialog,
+        val dp = DatePickerDialog(applicationContext,R.style.CustomDatePickerDialogStyle,
             { datePicker, Year, Month, Day -> binding.edtDob.setText(Day.toString() + "/" + (Month + 1) + "/" + Year) },
             year,
             month,

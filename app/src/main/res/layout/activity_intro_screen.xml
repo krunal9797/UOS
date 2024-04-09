@@ -33,6 +33,7 @@
             android:singleLine="true"
             android:textColor="@color/white"
             android:text="Skip"
+            android:textAllCaps="true"
             android:textSize="17sp"
              android:textStyle="bold" />
 
@@ -86,6 +87,7 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="Next"
+                android:textAllCaps="true"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -93,17 +95,17 @@
                 android:id="@+id/btn_done"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:autoSizeMinTextSize="12sp"
                 android:maxEms="10"
+                android:textColor="@color/white"
                 android:singleLine="true"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:text="done"
-                android:layout_marginEnd="10dp"
+                android:text="Done"
+                android:textAllCaps="true"
                 android:textSize="17sp"
-                android:textColor="@color/white"
-                android:layout_marginBottom="7dp"
-                android:textStyle="bold"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

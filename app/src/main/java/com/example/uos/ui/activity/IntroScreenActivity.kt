@@ -30,7 +30,7 @@ class IntroScreenActivity : BaseActivity() {
             IntroModel(
                 getString(R.string.g_one),
                 getString(R.string.g_one_description),
-                R.drawable.introscreen_1
+                R.drawable.intro_1
             )
         )
 
@@ -38,7 +38,7 @@ class IntroScreenActivity : BaseActivity() {
             IntroModel(
                 getString(R.string.g_two),
                 getString(R.string.g_two_description),
-                R.drawable.introscreen_1
+                R.drawable.intro_2
             )
         )
 
@@ -46,7 +46,7 @@ class IntroScreenActivity : BaseActivity() {
             IntroModel(
                 getString(R.string.g_three),
                 getString(R.string.g_three_description),
-                R.drawable.introscreen_1
+                R.drawable.intro_3
             )
         )
 

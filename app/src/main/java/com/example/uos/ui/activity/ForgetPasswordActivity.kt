@@ -1,9 +1,11 @@
 package com.example.uos.ui.activity
 
+import android.app.DatePickerDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -17,6 +19,8 @@ import com.example.uos.databinding.ActivityForgetPasswordBinding
 import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
 import com.example.uos.utils.Utils
+import java.util.Calendar
+import java.util.GregorianCalendar
 
 class ForgetPasswordActivity : BaseActivity() {
     lateinit var binding: ActivityForgetPasswordBinding
@@ -33,6 +37,14 @@ class ForgetPasswordActivity : BaseActivity() {
         setContentView(binding.root)
 
         vm = ViewModelProvider(this)[ViewModel::class.java]
+        customProgressDialog = CustomProgressDialog(this)
+
+        binding.edtDob.setOnTouchListener { v, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                dobDialogue()
+            }
+            true
+        }
 
 
         binding.btnForget.setOnClickListener {
@@ -82,5 +94,36 @@ class ForgetPasswordActivity : BaseActivity() {
             }
 
         }
+
+        binding.ivBack.setOnClickListener {
+            backEvent()
+        }
+    }
+
+    private fun dobDialogue() {
+        val gc1 = GregorianCalendar()
+        val year: Int
+        val month: Int
+        val day: Int
+        year = gc1.get(Calendar.YEAR)
+        month = gc1.get(Calendar.MONTH)
+        day = gc1.get(Calendar.DAY_OF_MONTH)
+        val dp = DatePickerDialog(this,R.style.CustomDatePickerDialogStyle,
+            { datePicker, Year, Month, Day -> binding.edtDob.setText(Day.toString() + "/" + (Month + 1) + "/" + Year) },
+            year,
+            month,
+            day
+        )
+        dp.show()
+    }
+
+    override fun onBackPressed() {
+        backEvent()
+    }
+
+    private fun backEvent() {
+        val intent = Intent(applicationContext,LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

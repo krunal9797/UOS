@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".ui.activity.SettingActivity">
 
@@ -52,20 +53,22 @@
         android:orientation="vertical">
 
 
-        <TextView
+        <ImageView
             android:id="@+id/tvName"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/ic_round"
+            android:contentDescription="@string/app_name"
             android:gravity="center"
             android:maxLength="2"
-            android:text="KK"
+            android:src="@drawable/uos"
             android:textAllCaps="true"
             android:textColor="@color/white"
             android:textSize="28sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:tint="@color/white" />
+
 
         <TextView
             android:id="@+id/tvProfile"
@@ -90,7 +93,23 @@
             android:background="@drawable/edit_text_bg"
             android:gravity="start|center"
             android:padding="10dp"
+            app:trackTint="@color/thumb_button"
+            android:buttonTint="@color/thumb_button"
             android:text="Notification" />
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_bg"
+            android:drawableTint="@color/text_view"
+            android:textColor="@color/text_view"
+            android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
+            android:gravity="start|center"
+            android:padding="10dp"
+            android:text="Language" />
 
         <TextView
             android:id="@+id/tvAboutUS"

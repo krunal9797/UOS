@@ -67,9 +67,9 @@ class DonationActivity : BaseActivity() {
                 if (result.error == "200") {
                     customProgressDialog.dismiss()
 
-                    val mobile = "+919574115670"
-                    if (choose=="call")
+                     if (choose=="call")
                     {
+                        val mobile = "+919574115670"
                         val intent = Intent(Intent.ACTION_DIAL).apply {
                             data = Uri.parse("tel:${mobile}")
                         }
@@ -78,7 +78,7 @@ class DonationActivity : BaseActivity() {
                     else
                     {
 //                        val url = "https://wa.me/$mobile" // WhatsApp URL with the phone number
-
+                        val mobile = "+917046114313"
                         val uri = Uri.parse("smsto:$mobile")
                         val intent = Intent(Intent.ACTION_SENDTO, uri)
                         intent.`package` = "com.whatsapp"

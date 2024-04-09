@@ -8,6 +8,8 @@
 
     <RelativeLayout
         android:id="@+id/rl_bg"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/language_selector_bg"
         android:layout_width="1020px"
         android:layout_height="150px">
 
@@ -16,6 +18,7 @@
             android:layout_width="156px"
             android:layout_height="84px"
             android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_launcher_background"
             android:visibility="visible"
@@ -39,7 +42,10 @@
             android:layout_height="66px"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
             android:clickable="false"
+            android:button="@null"
+            android:background="@drawable/language_selector"
             android:focusable="false"
             android:textAllCaps="true"
             tools:ignore="PxUsage" />

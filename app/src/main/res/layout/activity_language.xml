@@ -1,57 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ui.activity.LanguageActivity">
 
-    <RelativeLayout
-        android:id="@+id/rl_appBar"
+    <View
+        android:id="@+id/bg_top_header"
         android:layout_width="match_parent"
-        android:layout_height="156px">
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/top_header" />
 
-        <ImageView
-            android:id="@+id/iv_back"
-            android:layout_width="69px"
-            android:layout_height="69px"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/app_name"
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
             android:src="@drawable/baseline_arrow_back_ios_24"
-            tools:ignore="PxUsage" />
+            android:tint="@color/back_button" />
+
 
         <TextView
-            android:id="@+id/tv_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toLeftOf="@+id/ivDone"
+            android:layout_toRightOf="@+id/ivBack"
             android:gravity="center"
-            android:maxEms="8"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            android:textSize="21sp" />
+            android:text="Choose Language"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/iv_done"
-            android:layout_width="75px"
-            android:layout_height="75px"
-            android:layout_marginEnd="20dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/baseline_arrow_back_ios_24"
-            tools:ignore="PxUsage" />
+            android:id="@+id/ivDone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_done"
+            android:tint="@color/back_button" />
 
     </RelativeLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_language"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rl_appBar"
+        android:layout_below="@+id/rlTop"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/row_language" />
 
-</LinearLayout>
+</RelativeLayout>

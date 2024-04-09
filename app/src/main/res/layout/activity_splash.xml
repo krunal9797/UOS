@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.activity.SplashActivity">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -14,14 +15,17 @@
         app:lottie_rawRes="@raw/splash"
         android:layout_centerInParent="true"
         android:layout_width="350dp"
+        app:lottie_speed="3.5"
         android:layout_height="350dp"/>
 
     <TextView
-        android:layout_below="@+id/lottie"
-        android:text="Welcome To Unity"
+        android:layout_above="@+id/lottie"
+        android:text="Welcome \nTo\nUnity of south gujarat"
+        android:textAllCaps="true"
         android:padding="10dp"
         android:gravity="center"
-        android:textSize="17sp"
+        android:textSize="21sp"
+        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

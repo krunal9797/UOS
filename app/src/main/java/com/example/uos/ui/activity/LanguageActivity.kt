@@ -33,11 +33,11 @@ class LanguageActivity : BaseActivity(), OnCheckLanguage {
 
         From = intent.getIntExtra("from", -1)
 
-        if (From == 1) { binding.ivBack.visibility = View.VISIBLE } else { binding.ivBack.visibility = View.GONE }
+        if (From == 1) { binding.ivBack.visibility = View.VISIBLE } else { binding.ivBack.visibility = View.INVISIBLE }
 
         arrLanguage.add(
             LanguageModel(
-                R.drawable.ic_launcher_background,
+                R.drawable.lang_english,
                 "English (English)",
                 "en",
                 false
@@ -45,7 +45,7 @@ class LanguageActivity : BaseActivity(), OnCheckLanguage {
         )
         arrLanguage.add(
             LanguageModel(
-                R.drawable.ic_launcher_background,
+                R.drawable.lang_hindi,
                 "Hindi (हिंदी)",
                 "hi",
                 false
@@ -53,15 +53,15 @@ class LanguageActivity : BaseActivity(), OnCheckLanguage {
         )
         arrLanguage.add(
             LanguageModel(
-                R.drawable.ic_launcher_background,
-                "Marathi (हिंदी)",
+                R.drawable.lang_marathi,
+                "Marathi (मराठी)",
                 "mr",
                 false
             )
         )
         arrLanguage.add(
             LanguageModel(
-                R.drawable.ic_launcher_background,
+                R.drawable.lang_punjabi,
                 "Punjabi (ਪੰਜਾਬੀ)",
                 "pa",
                 false
@@ -91,7 +91,15 @@ class LanguageActivity : BaseActivity(), OnCheckLanguage {
                 if (From == 1) {
                     val i = Intent(this@LanguageActivity, MainActivity::class.java)
                     startActivity(i)
-                } else {
+                    finish()
+                }
+                else if (From == 2) {
+                    val i = Intent(this@LanguageActivity, SettingActivity::class.java)
+                    startActivity(i)
+                    finish()
+                }
+
+                else {
                     startActivity(
                         Intent(
                             this@LanguageActivity,
@@ -111,10 +119,7 @@ class LanguageActivity : BaseActivity(), OnCheckLanguage {
     }
 
     private fun setDesign() {
-        HelperResizer.getHeightAndWidth(applicationContext)
-        HelperResizer.setSize(binding.ivDone, 75, 75, true)
-        HelperResizer.setSize(binding.ivBack, 69, 69, true)
-        HelperResizer.setSize(binding.rlAppBar, 1080, 156, true)
+
     }
 
     @SuppressLint("MissingSuperCall")
@@ -125,6 +130,11 @@ class LanguageActivity : BaseActivity(), OnCheckLanguage {
     private fun backEvent() {
         if (From == 1) {
             val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+        if (From == 2) {
+            val intent = Intent(applicationContext, SettingActivity::class.java)
             startActivity(intent)
             finish()
         } else {

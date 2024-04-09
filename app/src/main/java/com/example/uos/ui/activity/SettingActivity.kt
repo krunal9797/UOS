@@ -69,6 +69,11 @@ class SettingActivity : BaseActivity() {
 
         }
 
+        binding.tvLanguage.setOnClickListener {
+            startActivity(Intent(this, LanguageActivity::class.java).putExtra("from",2))
+            finish()
+        }
+
         binding.ivBack.setOnClickListener { backEvent() }
 
     }

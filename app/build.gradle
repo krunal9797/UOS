@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.uos"
-        minSdk 21
+        minSdk 24
         targetSdk 34
         versionCode 1
         versionName "1.0"
@@ -66,8 +66,6 @@ dependencies {
     //circleimage
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    //ads
-    implementation 'com.google.android.gms:play-services-ads:22.4.0'
 
     def lifecycle_version = '2.6.2'
     implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"

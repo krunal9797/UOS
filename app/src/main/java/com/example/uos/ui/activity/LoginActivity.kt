@@ -1,30 +1,20 @@
 package com.example.uos.ui.activity
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
-import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
-import com.example.uos.R
 import com.example.uos.Vm.ViewModel
 import com.example.uos.databinding.ActivityLoginBinding
 import com.example.uos.utils.CustomProgressDialog
 import com.example.uos.utils.SharedPreference
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
 
 class LoginActivity : BaseActivity() {
-    lateinit var binding:ActivityLoginBinding
-    var isEmailVisible = true
+    lateinit var binding: ActivityLoginBinding
+    var isEmailVisible = false
 
     lateinit var vm: ViewModel
-    lateinit var mAdView:AdView;
     private var registerMap: HashMap<String, String> = HashMap()
     private lateinit var customProgressDialog: CustomProgressDialog
 
@@ -37,27 +27,37 @@ class LoginActivity : BaseActivity() {
         customProgressDialog = CustomProgressDialog(this)
 
         binding.tvLoginWithEmail.setOnClickListener {
-            if (!isEmailVisible) {
-                animateFlip()
-                isEmailVisible = true
-            }
+            binding.tvEmail.visibility = View.VISIBLE
+            binding.edtEmail.visibility = View.VISIBLE
+            binding.tvMobile.visibility = View.GONE
+            binding.edtMobile.visibility = View.GONE
+            binding.tvLoginWithMobile.visibility = View.VISIBLE
+            binding.tvLoginWithEmail.visibility = View.GONE
+            binding.edtEmail.setText("")
+            binding.edtMobile.setText("")
+            binding.edtPassword.setText("")
         }
 
         binding.tvLoginWithMobile.setOnClickListener {
-            if (isEmailVisible) {
-                animateFlip()
-                isEmailVisible = false
-            }
+            binding.edtEmail.visibility = View.GONE
+            binding.tvEmail.visibility = View.GONE
+            binding.edtMobile.visibility = View.VISIBLE
+            binding.tvMobile.visibility = View.VISIBLE
+            binding.tvLoginWithMobile.visibility = View.GONE
+            binding.tvLoginWithEmail.visibility = View.VISIBLE
+            binding.edtEmail.setText("")
+            binding.edtMobile.setText("")
+            binding.edtPassword.setText("")
         }
 
         binding.tvSignUp.setOnClickListener {
-            startActivity(Intent(applicationContext,RegistrationActivity::class.java))
+            startActivity(Intent(applicationContext, RegistrationActivity::class.java))
             finish()
 
         }
 
         binding.tvForgotPass.setOnClickListener {
-            startActivity(Intent(applicationContext,ForgetPasswordActivity::class.java))
+            startActivity(Intent(applicationContext, ForgetPasswordActivity::class.java))
             finish()
         }
 
@@ -109,8 +109,8 @@ class LoginActivity : BaseActivity() {
                     Toast.makeText(
                         applicationContext, "" + result.user.name, Toast.LENGTH_SHORT
                     ).show()
-                    SharedPreference.saveUser(applicationContext,result.user)
-                    val intent = Intent(applicationContext,MainActivity::class.java)
+                    SharedPreference.saveUser(applicationContext, result.user)
+                    val intent = Intent(applicationContext, MainActivity::class.java)
                     startActivity(intent)
                     finish()
 

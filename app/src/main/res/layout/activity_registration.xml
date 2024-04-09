@@ -272,6 +272,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:button="@drawable/language_select"
+                    android:drawableStart="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="User" />
 
                 <RadioButton
@@ -279,6 +283,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:button="@drawable/language_select"
+                    android:drawableStart="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:layout_marginStart="10dp"
                     android:text="Donor" />
 
             </RadioGroup>
