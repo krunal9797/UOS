@@ -216,4 +216,13 @@ class RegistrationActivity : BaseActivity() {
         a1 = b1!!.create()
         a1!!.show()
     }
+
+    override fun onBackPressed() {
+        backEvent()
+    }
+
+    private fun backEvent() {
+        startActivity(Intent(applicationContext, LoginActivity::class.java))
+        finish()
+    }
 }

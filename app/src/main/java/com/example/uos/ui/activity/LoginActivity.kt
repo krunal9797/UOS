@@ -27,6 +27,7 @@ class LoginActivity : BaseActivity() {
         customProgressDialog = CustomProgressDialog(this)
 
         binding.tvLoginWithEmail.setOnClickListener {
+            isEmailVisible = true
             binding.tvEmail.visibility = View.VISIBLE
             binding.edtEmail.visibility = View.VISIBLE
             binding.tvMobile.visibility = View.GONE
@@ -39,6 +40,7 @@ class LoginActivity : BaseActivity() {
         }
 
         binding.tvLoginWithMobile.setOnClickListener {
+            isEmailVisible = false
             binding.edtEmail.visibility = View.GONE
             binding.tvEmail.visibility = View.GONE
             binding.edtMobile.visibility = View.VISIBLE
@@ -160,5 +162,10 @@ class LoginActivity : BaseActivity() {
         if (isLoggedIn) {
             startActivity(Intent(applicationContext, MainActivity::class.java))
         }
+    }
+
+    override fun onBackPressed() {
+        finish()
+        finishAffinity()
     }
 }
