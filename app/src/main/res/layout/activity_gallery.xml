@@ -28,6 +28,8 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivBack"
             android:layout_width="48dp"
+            android:contentDescription="@string/back"
+
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:padding="10dp"

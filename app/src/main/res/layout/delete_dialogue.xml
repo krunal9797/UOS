@@ -37,7 +37,7 @@
                     android:textSize="21sp"
                     android:singleLine="true"
                     android:gravity="center"
-                    android:text="Delete Account " />
+                    android:text="@string/delete_account" />
 
 
                 <ImageView
@@ -61,7 +61,7 @@
                 android:gravity="center"
                 android:maxLines="3"
                 android:textSize="17sp"
-                android:text="Are you sure you want to delete your account? \nPlease Enter confirm to proceed with the deletion." />
+                android:text="@string/are_you_sure_you_want_to_delete_your_account_nplease_enter_confirm_to_proceed_with_the_deletion" />
 
             <EditText
                 android:layout_marginTop="10dp"
@@ -72,7 +72,7 @@
                 android:singleLine="true"
                 android:textColor="@color/black"
                 android:background="@drawable/edit_text_bg"
-                android:hint="Type Confirm"
+                android:hint="@string/type_confirm"
                 android:padding="10dp" />
 
 
@@ -87,7 +87,7 @@
                 android:gravity="center"
                 android:singleLine="true"
                 android:textStyle="bold"
-                android:text="Detele"
+                android:text="@string/delete"
                 android:layout_marginBottom="20dp"
                 android:textAllCaps="true"
                 android:textColor="@color/button_color" />

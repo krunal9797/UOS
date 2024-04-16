@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ivClose"
                 android:gravity="center"
-                android:text="Thanks you for send blood request \n donor will connect soon" />
+                android:text="@string/thanks_you_for_send_blood_request_n_donor_will_connect_soon" />
 
 
 
@@ -56,7 +56,7 @@
                 android:textStyle="bold"
                 android:singleLine="true"
                 android:textAllCaps="true"
-                android:text="OKY"
+                android:text="@string/oky"
                 android:textColor="@color/button_color" />
 
 

@@ -116,4 +116,14 @@
     <string name="good_evening">ਸ਼ੁਭ ਸ਼ਾਮ</string>
     <string name="welcome_to_uos">UOS ਵਲੋਂ ਸੁਆਗਤ ਹੈ</string>
 
+    <string name="are_you_sure_you_want_to_exit">ਕੀ ਤੁਸੀਂ ਵਾਕਈ ਬਾਹਰ ਨਿਕਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="yes">ਹਾਂ</string>
+    <string name="thanks_you_for_send_blood_request_n_donor_will_connect_soon">ਰੱਖਤ ਬੇਨਤੀ ਭੇਜਣ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ \n ਦਾਤਾ ਜਲਦ ਹੀ ਸੰਪਰਕ ਕਰੇਗਾ</string>
+    <string name="oky">ਠੀਕ ਹੈ</string>
+    <string name="select_blood_group">ਰੱਖਤ ਗਰੁੱਪ ਚੁਣੋ</string>
+    <string name="are_you_sure_you_want_to_delete_your_account_nplease_enter_confirm_to_proceed_with_the_deletion">ਕੀ ਤੁਸੀਂ ਵਾਕਈ ਆਪਣਾ ਖਾਤਾ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? \n ਵਧੇਰੇ ਹਟਾਉਣ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ.</string>
+    <string name="type_confirm">ਪੁਸ਼ਟੀ ਟਾਈਪ ਕਰੋ</string>
+    <string name="delete">ਹਟਾਓ</string>
+
+
 </resources>

@@ -17,27 +17,28 @@ class SplashActivity : BaseActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        // Use a Handler to delay the transition from the splash screen to your app's content
         Handler(Looper.getMainLooper()).postDelayed({
+            navigateToNextScreen()
+        }, 3500) // Adjust this delay as needed
 
-            if (SP_Manager.getGuideCompleted()) {
-                val isLoggedIn = SharedPreference.isLoggedIn(applicationContext)
 
-                if (isLoggedIn) {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
-                } else {
-                    startActivity(Intent(applicationContext, IntroScreenActivity::class.java))
-                }
 
-            } else {
-                val intent = Intent(applicationContext, LanguageActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(intent)
-                finish()
+    }
 
+    private fun navigateToNextScreen() {
+        if (SP_Manager.getGuideCompleted()) {
+            val isLoggedIn = SharedPreference.isLoggedIn(applicationContext)
+            val nextActivity = if (isLoggedIn) MainActivity::class.java else IntroScreenActivity::class.java
+            startActivity(Intent(applicationContext, nextActivity))
+        } else {
+            val intent = Intent(applicationContext, LanguageActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
             }
-
-        }, 3500)
-
+            startActivity(intent)
+        }
+        finish()
     }
 
 

@@ -117,5 +117,14 @@
     <string name="good_afternoon">શુભ અપરાંહ</string>
     <string name="good_evening">શુભ સાંજ</string>
     <string name="welcome_to_uos">UOS માં સ્વાગત છે</string>
+    <string name="are_you_sure_you_want_to_exit">શું તમે ખોટું બંધ કરવા માંગો છો?</string>
+    <string name="yes">હા</string>
+    <string name="thanks_you_for_send_blood_request_n_donor_will_connect_soon">રક્ત વિનંતી માટે આભાર \n દાતા બહુ જલદી જોડાય છે</string>
+    <string name="oky">ઠીક છે</string>
+    <string name="select_blood_group">રક્ત ગ્રુપ પસંદ કરો</string>
+    <string name="are_you_sure_you_want_to_delete_your_account_nplease_enter_confirm_to_proceed_with_the_deletion">શું તમે તમારા ખાતાને ડિલીટ કરવા માંગો છો? \n કૃપા કરીને ડિલીટ કરવા માટે પ્રમાણીકરણ દાખલ કરો.</string>
+    <string name="type_confirm">પ્રમાણીકરણ ટાઇપ કરો</string>
+    <string name="delete">ડિલીટ</string>
+
 
 </resources>

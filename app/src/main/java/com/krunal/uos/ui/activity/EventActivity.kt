@@ -29,7 +29,7 @@ import com.krunal.uos.utils.SharedPreference
 
 class EventActivity : BaseActivity(), OnClickImage {
     lateinit var binding:ActivityEventBinding
-    lateinit var vm: com.krunal.uos.Vm.ViewModel
+    lateinit var vm: ViewModel
     private var user: User? = null
     private lateinit var eventAdapter: EventAdapter
     private lateinit var customProgressDialog: CustomProgressDialog
@@ -50,7 +50,7 @@ class EventActivity : BaseActivity(), OnClickImage {
             backEvent()
         }
 
-        vm = ViewModelProvider(this)[com.krunal.uos.Vm.ViewModel::class.java]
+        vm = ViewModelProvider(this)[ViewModel::class.java]
         user = SharedPreference.getUser(this)
         customProgressDialog = CustomProgressDialog(this)
 
